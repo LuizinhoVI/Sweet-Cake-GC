@@ -1,6 +1,11 @@
 body {
     font-family: "Times New Roman", Georgia, Serif;
     margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -11,4 +16,21 @@ h5,
 h6 {
     font-family: "Playfair Display";
     letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .modo_cell {
+        display: none;
+    }
+    .w3-xxlarge {
+        position: relative;
+        top: 22px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .w3-display-bottomleft .w3-xxlarge {
+        font-size: 5px;
+    }
 }

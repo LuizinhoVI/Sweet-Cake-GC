@@ -14,20 +14,25 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-            <a href="#home" class="w3-bar-item w3-button">Sweet Cake GC</a>
+            <div class="modo_cell">
+                <a href="#home" class="w3-bar-item w3-button ">Sweet Cake GC</a></div>
+
+            <a href="#"><img src="src/img/logo (2).png" alt="inicio" width="32px" height="32px"> </a>
             <!-- Right-sided navbar links. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <a href="#contato" class="w3-bar-item w3-button">Contato</a>
-                <a href="#cheff" class="w3-bar-item w3-button">Cheff</a>
-                <a href="#cardapio" class="w3-bar-item w3-button">Cardapio</a>
-                <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+            <div class="w3-right w3-small ">
+                <div class="modo_cell1">
+                    <a href="#contato" class="w3-bar-item w3-button">Contato</a>
+                    <a href="#cheff" class="w3-bar-item w3-button">Cheff</a>
+                    <a href="#cardapio" class="w3-bar-item w3-button">Cardapio</a>
+                    <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Header -->
     <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-        <img class="w3-image" src="src/img/morango.jpeg" alt="Hamburger Catering" width="1600" height="800">
+        <img class="w3-image" src="src/img/morango.jpeg" alt="Hamburger Catering" width="100%" height="">
         <div class="w3-display-bottomleft w3-padding-large w3-opacity">
             <h1 class="w3-xxlarge">Gourmet e Tradicional</h1>
         </div>
@@ -137,19 +142,19 @@
             <p> formas de entrar em contato... </p>
             <p class="w3-text-blue-grey w3-large"><b>Endereço de atendimento (opcional)</b></p>
             <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.07649940590798!2d-37.053040974401966!3d-10.510236464681164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x705694dce44cf9b%3A0xb0f9492781a1cddb!2sCapela!5e1!3m2!1spt-BR!2sbr!4v1628089801664!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+                    width="60%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
             <p id="contato">meio de entrar em contato...</p>
             <form action="/action_page.php" target="_blank">
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name"></p>
                 <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p>
                 <p><input class="w3-input w3-padding-16" type="tel" maxlength="11" minlength="9" placeholder="Numero" required name="People"></p>
-                <p><input class="w3-input w3-padding-16" type="list" placeholder="Escolha" required name="list" id="list">
-                    <datalist id="list">
-                        <option value="Edge">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
+                <p><input class="w3-input w3-padding-16" list="comida" maxlength="2" minlength="1" placeholder="Escolha" required name="list" id="teste">
+                    <datalist id="comida">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
                       </datalist></p>
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
                 <p><button class="w3-button w3-light-grey w3-section" type="submit">Enviar </button></p>
