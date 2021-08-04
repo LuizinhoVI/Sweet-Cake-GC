@@ -35,6 +35,9 @@ h6 {
         left: 40px;
         font-size: 29px;
     }
+    .w3-image {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 500px) {
