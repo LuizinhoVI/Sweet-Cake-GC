@@ -18,22 +18,27 @@ h6 {
     letter-spacing: 5px;
 }
 
+#tema1 {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
     .modo_cell {
         display: none;
     }
-    .w3-xxlarge {
+    #tema1 {
         position: relative;
         top: 22px;
-        text-align: center;
-    }
-    .icone_cheff:hover {
-        background-image: url("src/img/logo\ \(1\).png");
+        left: 40px;
+        font-size: 29px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .w3-display-bottomleft .w3-xxlarge {
+    .w3-xxlarge {
         font-size: 5px;
     }
 }
