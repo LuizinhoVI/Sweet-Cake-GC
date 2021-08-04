@@ -27,6 +27,9 @@ h6 {
         top: 22px;
         text-align: center;
     }
+    .icone_cheff:hover {
+        background-image: url("src/img/logo\ \(1\).png");
+    }
 }
 
 @media only screen and (max-width: 500px) {
