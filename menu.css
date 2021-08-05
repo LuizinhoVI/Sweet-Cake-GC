@@ -21,6 +21,9 @@
 
 /* footer parte do rodape */
 
-.w3-hover-text->div {
-    position: absolute;
+footer {
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+    position: relative;
 }
