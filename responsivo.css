@@ -5,16 +5,29 @@
     #tema1 {
         position: relative;
         top: 22px;
-        left: 40px;
+        margin-left: 50%;
+        transform: translateX(-15%);
         font-size: 29px;
     }
     .w3-image {
         display: block;
     }
+    /* video do cardapio */
     iframe {
-        width: 90%;
+        width: 100%;
+    }
+    /* botão de enviar os dados dos clientes */
+    #enviar {
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
     footer {
-        width: 35em;
+        width: 33.6em;
+    }
+    /* centro do meus posts */
+    #menu_de_comidas {
+        width: 34em;
+        display: grid;
+        place-content: center;
     }
 }

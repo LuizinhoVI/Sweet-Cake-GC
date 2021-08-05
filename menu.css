@@ -1,29 +1,38 @@
-/* icon do menu  */
-
-
-/* imagens do cardapio */
-
-.w3-col>img {
-    box-shadow: 0;
-    transition: box 10s;
-}
-
-.w3-col>img:hover {
-    box-shadow: 0px 0px 10px 1px;
-    transition: box-shadow 1s;
-}
-
-.perfil_chef {
-    width: 50%;
-    height: 50%;
-}
-
-
-/* footer parte do rodape */
-
-footer {
-    width: 100%;
-    height: auto;
-    background-color: aqua;
-    position: relative;
-}
+    /* imagens do cardapio */
+    
+    .w3-col>img {
+        box-shadow: 0;
+        transition: box 10s;
+    }
+    
+    .w3-col>img:hover {
+        box-shadow: 0px 0px 10px 1px;
+        transition: box-shadow 1s;
+    }
+    
+    .perfil_chef {
+        width: 50%;
+        height: 50%;
+    }
+    /* footer parte do rodape */
+    
+    .w3-hover-text- {
+        width: 60%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* redesociais */
+    
+    footer>nav>div {
+        position: absolute;
+    }
+    
+    footer>nav>nav>a {
+        color: blue;
+    }
+    
+    footer>nav>nav {
+        position: absolute;
+        right: 0;
+    }
