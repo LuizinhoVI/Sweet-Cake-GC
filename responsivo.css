@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+    .modo_cell {
+        display: none;
+    }
+    #tema1 {
+        position: relative;
+        top: 22px;
+        left: 40px;
+        font-size: 29px;
+    }
+    .w3-image {
+        display: block;
+    }
+    iframe {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .w3-xxlarge {
+        font-size: 5px;
+    }
+}
