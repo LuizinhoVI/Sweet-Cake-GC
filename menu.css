@@ -17,15 +17,25 @@
     /* footer parte do rodape */
     
     .w3-hover-text- {
-        width: 60%;
+        width: 300px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        border: solid red 1px;
     }
     /* redesociais */
     
-    footer>nav>div {
-        position: absolute;
+    footer {
+        border: solid red 1px;
+        width: 100%;
+    }
+    
+    footer>h4 {
+        text-align: center;
+    }
+    
+    footer>nav {
+        margin-top: 10px;
     }
     
     footer>nav>nav>a {
@@ -33,6 +43,15 @@
     }
     
     footer>nav>nav {
-        position: absolute;
+        position: relative;
+        left: 85%;
+    }
+    
+    footer>nav>nav {
+        position: relative;
         right: 0;
+    }
+    
+    footer>nav>div {
+        position: absolute;
     }

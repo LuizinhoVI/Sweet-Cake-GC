@@ -22,12 +22,16 @@
         transform: translateX(-50%);
     }
     footer {
-        width: 33.6em;
+        width: 100%;
+        /* width: 33.6em; */
     }
     /* centro do meus posts */
     #menu_de_comidas {
         width: 34em;
         display: grid;
         place-content: center;
+    }
+    footer>nav>nav {
+        left: 80%;
     }
 }
