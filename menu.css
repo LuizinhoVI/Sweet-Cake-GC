@@ -21,12 +21,10 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        border: solid red 1px;
     }
     /* redesociais */
     
     footer {
-        border: solid red 1px;
         width: 100%;
     }
     
@@ -44,12 +42,7 @@
     
     footer>nav>nav {
         position: relative;
-        left: 85%;
-    }
-    
-    footer>nav>nav {
-        position: relative;
-        right: 0;
+        right: -85%;
     }
     
     footer>nav>div {
