@@ -1,6 +1,7 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 415px) {
     .modo_cell {
         display: none;
+        font-size: 15px;
     }
     #tema1 {
         position: relative;
@@ -31,7 +32,11 @@
         display: grid;
         place-content: center;
     }
+    /* footer parte final da pagina */
     footer>nav>nav {
-        left: 80%;
+        left: 75%;
+    }
+    footer>nav {
+        font-size: 12px;
     }
 }
