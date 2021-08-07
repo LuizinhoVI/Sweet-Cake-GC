@@ -1,4 +1,4 @@
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 650px) {
     .modo_cell {
         display: none;
         font-size: 15px;
@@ -24,7 +24,6 @@
     }
     footer {
         width: 100%;
-        /* width: 33.6em; */
     }
     /* centro do meus posts */
     #menu_de_comidas {

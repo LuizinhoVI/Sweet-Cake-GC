@@ -1,50 +1,69 @@
-    /* imagens do cardapio */
-    
-    .w3-col>img {
-        box-shadow: 0;
-        transition: box 10s;
-    }
-    
-    .w3-col>img:hover {
-        box-shadow: 0px 0px 10px 1px;
-        transition: box-shadow 1s;
-    }
-    
-    .perfil_chef {
-        width: 50%;
-        height: 50%;
-    }
-    /* footer parte do rodape */
-    
-    .w3-hover-text- {
-        width: 300px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    /* redesociais */
-    
-    footer {
-        width: 100%;
-    }
-    
-    footer>h4 {
-        text-align: center;
-    }
-    
-    footer>nav {
-        margin-top: 10px;
-    }
-    
-    footer>nav>nav>a {
-        color: blue;
-    }
-    
-    footer>nav>nav {
-        position: relative;
-        right: -85%;
-    }
-    
-    footer>nav>div {
-        position: absolute;
-    }
+/*  */
+
+#cheff {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/* logo da pagina */
+
+.logo_chef,
+.nome-logo {
+    position: absolute;
+}
+
+.modo_cell {
+    position: absolute;
+    left: 20px;
+    width: 205px;
+    height: 40px;
+    left: 50px;
+    top: 5px;
+}
+
+
+/*  */
+
+
+/*largura do menu top*/
+
+.w3-small {
+    position: relative;
+    /* right: 50px; */
+}
+
+
+/* imagens do cardapio */
+
+.w3-col>img {
+    box-shadow: 0;
+    transition: box 10s;
+}
+
+.w3-col>img:hover {
+    box-shadow: 0px 0px 10px 1px;
+    transition: box-shadow 1s;
+}
+
+.perfil_chef {
+    width: 50%;
+    height: 50%;
+}
+
+
+/* footer parte do rodape */
+
+.w3-hover-text- {
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* redesociais */
+
+footer>h4 {
+    text-align: center;
+}
