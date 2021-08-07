@@ -10,9 +10,6 @@
         transform: translateX(-15%);
         font-size: 29px;
     }
-    .w3-image {
-        display: block;
-    }
     /* video do cardapio */
     iframe {
         width: 100%;
@@ -22,20 +19,11 @@
         margin-left: 50%;
         transform: translateX(-50%);
     }
-    footer {
-        width: 100%;
-    }
     /* centro do meus posts */
     #menu_de_comidas {
-        width: 34em;
-        display: grid;
-        place-content: center;
+        width: 100%;
     }
-    /* footer parte final da pagina */
-    footer>nav>nav {
-        left: 75%;
-    }
-    footer>nav {
-        font-size: 12px;
+    #ingredientes {
+        width: 100%;
     }
 }
