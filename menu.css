@@ -3,7 +3,6 @@
 #cheff {
     display: grid;
     grid-template-columns: 1fr 300px 380px 1fr 1fr 1fr;
-    justify-content: left;
     text-align: left;
     border: rgb(0, 0, 0) 2px solid;
     box-shadow: 0px 0px 5px 1px;
@@ -75,4 +74,12 @@
 
 footer>h4 {
     text-align: center;
+}
+
+span {
+    color: green;
+}
+
+H5 {
+    color: red;
 }
