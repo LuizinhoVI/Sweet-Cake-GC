@@ -24,7 +24,7 @@
         width: 90%;
     }
     #ingredientes {
-        grid-template-columns: 100%;
-        left: -5%;
+        grid-template-columns: 90%;
+        left: ;
     }
 }
