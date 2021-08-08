@@ -1,18 +1,29 @@
 /*  */
 
-header>img {}
-
-#cheff {
+#ingredientes {
     display: grid;
-    grid-template-columns: 1fr 300px 380px 1fr 1fr 1fr;
+    width: 100%;
+    grid-template-columns: 0 1fr 1fr 1fr 1fr;
     text-align: left;
     border: rgb(0, 0, 0) 2px solid;
     box-shadow: 0px 0px 5px 1px;
-    grid-gap: 20px;
+    grid-gap: 10px;
+    border: solid red 1px;
+}
+
+#ingredientes>div {
+    position: relative;
 }
 
 #ingredientes:hover {
     box-shadow: 0px 0px 8px 0px blue;
+}
+
+.recheios {
+    position: absolute;
+    width: 60px;
+    left: 160px;
+    top: 70px;
 }
 
 
@@ -44,7 +55,8 @@ header>img {}
 .w3-col>img {
     box-shadow: 0;
     transition: box 10s;
-    width: 90%;
+    width: 80%;
+    border: solid 2px black;
 }
 
 .w3-col>img:hover {

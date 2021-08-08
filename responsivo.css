@@ -21,9 +21,10 @@
     }
     /* centro do meus posts */
     #menu_de_comidas {
-        width: 100%;
+        width: 90%;
     }
     #ingredientes {
-        width: 100%;
+        grid-template-columns: 100%;
+        left: -5%;
     }
 }
