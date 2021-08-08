@@ -44,6 +44,7 @@ header>img {}
 .w3-col>img {
     box-shadow: 0;
     transition: box 10s;
+    width: 90%;
 }
 
 .w3-col>img:hover {
