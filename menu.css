@@ -1,7 +1,11 @@
                 /*  */
                 
-                #modo_cell1 {
-                    width: auto;
+                .letra_do_menu {
+                    position: absolute;
+                    text-align: left;
+                    left: 10px;
+                    top: 52px;
+                    font-size: 10px;
                 }
                 
                 #modo_cell1>a {
@@ -11,16 +15,17 @@
                 #modo_cell1>div {
                     display: none;
                     position: relative;
-                    border: red 1px solid;
                 }
                 
                 #modo_cell1>div>a {
+                    position: relative;
                     border-bottom: black 1px solid;
+                    top: -5px;
                     margin-right: 10px;
                 }
                 
                 .foto_top {
-                    width: 50px;
+                    width: auto;
                     height: 50px;
                     top: -5px;
                     display: none;

@@ -3,6 +3,9 @@
                 display: none;
                 font-size: 15px;
             }
+            #modo_cell1 {
+                width: 400px;
+            }
             #menu-box {
                 width: 100%;
                 position: relative;
@@ -15,8 +18,13 @@
             #icone_cheff {
                 display: none;
             }
+            #modo_cell1>div>a {
+                display: grid;
+                justify-content: center;
+            }
             #modo_cell1>div {
                 display: block;
+                padding: 10px;
             }
             .foto_top {
                 display: block;
