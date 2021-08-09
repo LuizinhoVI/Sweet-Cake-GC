@@ -10,7 +10,7 @@
             left: 10px;
         }
         
-        #modo_cell1>div>a>img {
+        .foto_top {
             width: 50px;
             height: 50px;
             top: -5px;
