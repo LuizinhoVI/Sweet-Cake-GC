@@ -1,30 +1,65 @@
-@media only screen and (max-width: 850px) {
-    .modo_cell {
-        display: none;
-        font-size: 15px;
-    }
-    #tema1 {
-        position: relative;
-        top: 22px;
-        margin-left: 50%;
-        transform: translateX(-15%);
-        font-size: 29px;
-    }
-    /* video do cardapio */
-    iframe {
-        width: 100%;
-    }
-    /* botão de enviar os dados dos clientes */
-    #enviar {
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-    /* centro do meus posts */
-    #menu_de_comidas {
-        width: 90%;
-    }
-    #ingredientes {
-        grid-template-columns: 90%;
-        left: ;
-    }
-}
+        @media only screen and (max-width: 850px) {
+            .modo_cell {
+                display: none;
+                font-size: 15px;
+            }
+            #logo_chef {
+                top: 15px;
+            }
+            #icone_cheff {
+                width: 50px;
+                height: 50px;
+            }
+            #modo_cell1>div {
+                display: block;
+            }
+            #modo_cell1 {
+                position: relative;
+                width: 400px;
+                left: 150px;
+            }
+            #modo_cell1>a {
+                display: none;
+                width: 100px;
+                border: red 1px solid;
+            }
+            #tema1 {
+                position: relative;
+                top: 22px;
+                margin-left: 50%;
+                transform: translateX(-10%);
+                font-size: 22px;
+            }
+            /* video do cardapio */
+            iframe {
+                width: 100%;
+            }
+            /* botão de enviar os dados dos clientes */
+            #enviar {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+            /* centro do meus posts */
+            #menu_de_comidas {
+                width: 100%;
+            }
+            #ingredientes {
+                grid-template-columns: 90%;
+            }
+            #sobre {
+                background-position-y: 0px;
+                background-size: 100%;
+                height: 600px;
+            }
+            #sobre>h4 {
+                font-size: 18px;
+                width: 50%;
+                height: 120px;
+            }
+            #sobre>div {
+                width: 100%;
+                height: 100%;
+                margin-top: 0px;
+                font-size: 12px;
+            }
+        }
