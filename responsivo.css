@@ -13,6 +13,9 @@
             #modo_cell1>div {
                 display: block;
             }
+            .foto_top {
+                display: block;
+            }
             #modo_cell1 {
                 position: relative;
                 width: 400px;
