@@ -4,7 +4,7 @@
                     position: absolute;
                     text-align: left;
                     left: 10px;
-                    top: 52px;
+                    top: 60px;
                     font-size: 10px;
                 }
                 
@@ -20,8 +20,9 @@
                 #modo_cell1>div>a {
                     position: relative;
                     border-bottom: black 1px solid;
-                    top: -5px;
+                    height: 75px;
                     margin-right: 10px;
+                    margin-top: -20px;
                 }
                 
                 .foto_top {
