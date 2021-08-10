@@ -1,5 +1,9 @@
 /*  */
 
+#comida_imgoff {
+    display: none;
+}
+
 .letra_do_menu {
     position: absolute;
     text-align: left;
@@ -130,7 +134,7 @@
     border: solid 2px black;
 }
 
-.w3-col>img:hover {
+.m6>img:hover {
     box-shadow: 0px 0px 10px 1px;
     transition: box-shadow 1s;
 }

@@ -71,4 +71,12 @@
                 margin-top: 0px;
                 font-size: 12px;
             }
+            #comida_img {
+                display: none;
+            }
+            #comida_imgoff {
+                display: block;
+                justify-content: center;
+                padding: 20px;
+            }
         }
