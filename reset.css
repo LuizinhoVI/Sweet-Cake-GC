@@ -24,3 +24,12 @@ h6 {
     text-align: center;
     width: 100%;
 }
+
+@font-face {
+    font-family: honey;
+    src: url(src/font/Angler.ttf);
+}
+
+.letra {
+    font-family: honey;
+}

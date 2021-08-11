@@ -56,6 +56,8 @@
                 grid-template-columns: 90%;
             }
             #sobre {
+                display: grid;
+                justify-items: center;
                 background-position-y: 0px;
                 background-size: 100%;
                 height: 600px;
@@ -63,9 +65,11 @@
             #sobre>h4 {
                 font-size: 18px;
                 width: 50%;
-                height: 120px;
+                height: 100px;
             }
             #sobre>div {
+                display: grid;
+                justify-content: center;
                 width: 100%;
                 height: 100%;
                 margin-top: 0px;
@@ -78,5 +82,8 @@
                 display: block;
                 justify-content: center;
                 padding: 20px;
+            }
+            footer>h2 {
+                font-size: 16px;
             }
         }
