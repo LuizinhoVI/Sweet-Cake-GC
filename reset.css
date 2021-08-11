@@ -33,3 +33,10 @@ h6 {
 .letra {
     font-family: honey;
 }
+
+#doce,
+#salgado,
+#bolo,
+#gourmet {
+    display: none;
+}
