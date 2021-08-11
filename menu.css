@@ -96,6 +96,7 @@
 }
 
 .recheios {
+    display: none;
     position: absolute;
     width: 60px;
     left: 160px;
