@@ -259,10 +259,10 @@
             <h4>! Seu pedido sera direcionado e enviado via <span> Whatsapp após o Envio</span> ! </h4>
             <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
             <br>
-            <form action="" target="_blank ">
+            <form action="" target=" ">
                 <p><input class="w3-input w3-padding-16 " type="text " placeholder="Nome " required name="Name "></p>
                 <p><input class="w3-input w3-padding-16 " type="email " placeholder="Email" required name="email "></p>
-                <p><input class="w3-input w3-padding-16 " type="number" maxlength="11" minlength="9" placeholder="Celular " required name="People "></p>
+                <p><input class="w3-input w3-padding-16 " type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="79 + Celular" maxlength="11" minlength="9" required name="People "></p>
 
                 <p> <select class="w3-input w3-padding-16 " onchange="escolher_prato()" required name="list " id="tipo_prato">
             
@@ -271,32 +271,58 @@
                     <option value="Bolo">Bolo</option>
                     <option value="Salgado">Salgado</option>
                     <option value="Gourmet">Gourmet e Tradicional</option>
+                    <option value="copo">copo da felicidade</option>
             
                 </select></p>
+                <select class="w3-input w3-padding-16 " required name="list " id="copo_massa">
+                        
+                        <option value="Copos da Felicidade ">Massa</option>
+                        <option value="Copos da Felicidade ">Massa Red Velvet</option>
+                        <option value="Copos da Felicidade ">Massa branca (ovos) </option>
+                        <option value="Copos da Felicidade ">Massa Preta (chocolate) </option>
+                        <option value="Copos da Felicidade ">Massa laranja </option>
+                        <option value="Copos da Felicidade ">Massa cenoura</option>
+                        
+                </select>
+                <select class="w3-input w3-padding-16 " required name="list " id="copo_recheio">
+                        
+                        <option value="Copos da Felicidade ">Recheio (Ambos os recheios tem opções zero lactose)</option>
+                        <option value="Copos da Felicidade ">Amendoim </option>
+                        <option value="Copos da Felicidade ">Castanha</option>
+                        <option value="Copos da Felicidade ">Chocolate Branco</option>
+                        <option value="Copos da Felicidade ">Chocolate ao leite</option>
+                        <option value="Copos da Felicidade ">Chocolate meio amargo</option>
+                        <option value="Copos da Felicidade ">Creme Belga</option>
+                        <option value="Copos da Felicidade ">Creme belga com morangos</option>
+                        <option value="Copos da Felicidade ">Creme Brûleé</option>
+                        <option value="Copos da Felicidade ">Creme de oreo</option>
+                        <option value="Copos da Felicidade ">Limão</option>
+                </select>
                 <select class="w3-input w3-padding-16 " required name="list " id="doce">
-                  
-                        <option value="Torta de Limão Gelada ">Torta de Limão Gelada</option>
-                
-                        <option value="Copos da Felicidade ">Copos da Felicidade</option>
+                        
+                        <option value="Copos da Felicidade ">estamos atualizando no sistema ...</option>
                 </select>
                 <select class="w3-input w3-padding-16 " list="comida " placeholder="selecione o pedido" required name="list " id="salgado">
-                        <option value="Quiche de frango COM Lactose">Quiche de frango COM Lactose</option>
-                        <option value="Quiche de frango SEM Lactose">Quiche de frango SEM Lactose</option>
+                        <option value="Quiche de frango com Lactose">Quiche de frango COM Lactose</option>
+                        <option value="Quiche de frango sem Lactose">Quiche de frango SEM Lactose</option>
                      
                 </select>
                 <select class="w3-input w3-padding-16 " list="comida " placeholder="selecione o pedido" required name="list " id="bolo">
                         <option value="Mini Bolo Vulcão">Mini Bolo Vulcão</option>
-                        <option value="Mini Bolo Vulcão">Bolo Red velvet</option>
+                        <option value="Bolo Red velvet">Bolo Red velvet</option>
                      
                 </select>
                 <select class="w3-input w3-padding-16 " list="comida " placeholder="selecione o pedido" required name="list " id="gourmet">
-                        <option value="Mini Bolo Vulcão ">Mini Bolo Vulcão</option>
+                        <option value="Brownie ">Escolha o prato</option>
+                        <option value="Brownie ">Brownie </option>
+                        <option value="Red velvet">Red velvet</option>
+                        <option value="Torta de Limão Gelada">Torta de Limão Gelada</option>
+                        <option value="Torta de Negresco Gelada">Torta de Negresco Gelada</option>
                      
                 </select>
                 <p><button class="w3-button w3-light-grey w3-section " id="enviar" type="submit ">Enviar pedido </button></p>
             </form>
         </div>
-
         <!-- End page content -->
     </div>
 

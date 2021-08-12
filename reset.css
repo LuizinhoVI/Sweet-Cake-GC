@@ -37,6 +37,18 @@ h6 {
 #doce,
 #salgado,
 #bolo,
-#gourmet {
+#gourmet,
+#copo_massa,
+#copo_recheio {
     display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#copo_massa {
+    float: left;
+    width: 50%;
+}
+
+#copo_recheio {
+    width: 50%;
 }
