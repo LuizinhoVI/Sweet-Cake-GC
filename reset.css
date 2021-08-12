@@ -64,6 +64,6 @@ h6 {
     width: 50%;
 }
 
-.bawkbox-textarea-wrapper>disclaimer {
-    display: none;
+#sil-widget-611526052e41b4001f41249f {
+    z-index: 1;
 }
