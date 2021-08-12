@@ -39,12 +39,23 @@ h6 {
 #bolo,
 #gourmet,
 #copo_massa,
-#copo_recheio {
+#copo_recheio,
+#copo_cobertura,
+#copo_caldas {
     display: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #copo_massa {
+    float: left;
+    width: 50%;
+}
+
+#copo_cobertura {
+    width: 50%;
+}
+
+#copo_caldas {
     float: left;
     width: 50%;
 }

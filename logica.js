@@ -4,8 +4,10 @@ function escolher_prato() {
     var salgado = document.getElementById("salgado");
     var bolo = document.getElementById("bolo");
     var gourmet = document.getElementById("gourmet");
+    var copo_caldas = document.getElementById("copo_caldas");
     var copo_massa = document.getElementById("copo_massa");
     var copo_recheio = document.getElementById("copo_recheio");
+    var copo_cobertura = document.getElementById("copo_cobertura");
 
     if (tipo == "Doce") {
         doce.style.display = "block"
@@ -22,8 +24,12 @@ function escolher_prato() {
     if (tipo == "copo") {
         copo_massa.style.display = "block";
         copo_recheio.style.display = "block";
+        copo_cobertura.style.display = "block";
+        copo_caldas.style.display = "block";
     } else {
         copo_massa.style.display = "none"
         copo_recheio.style.display = "none"
+        copo_cobertura.style.display = "none"
+        copo_caldas.style.display = "none"
     }
 }
