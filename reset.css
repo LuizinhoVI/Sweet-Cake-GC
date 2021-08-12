@@ -63,3 +63,7 @@ h6 {
 #copo_recheio {
     width: 50%;
 }
+
+.bawkbox-textarea-wrapper>disclaimer {
+    display: none;
+}
