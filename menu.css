@@ -144,7 +144,7 @@
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
-        transition: box-shadow 3ms;
+        transition: box-shadow 1ms;
     }
     
     .perfil_chef {

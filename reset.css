@@ -35,7 +35,14 @@ h6 {
 }
 
 
-/* dados de comidas do site --------------------------------------------------- */
+/* fotos do menu de comida com slides */
+
+.frango {
+    display: none;
+}
+
+
+/* dados de comidas do site input --------------------------------------------------- */
 
 #doce,
 #salgado,

@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="menu.css">
 <link rel="stylesheet" href="responsivo.css">
 <script src="logica.js"></script>
+<script src="api_whatsapp.js"></script>
+<script src="slide.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,7 +34,7 @@
                     <a href="#sobre" class="w3-bar-item w3-button">sobre</a>
 
                     <div>
-                        <a href="#" class="w3-bar-item w3-button"><img src="src/img/logo (2).png" class="foto_top" alt="inicio" width="32px" height="32px"> <label class="letra_do_menu">Home</label></a>
+                        <a href="#" class="w3-bar-item w3-button frango"><img src="src/img/logo (2).png" class="foto_top" alt="inicio" width="32px" height="32px"> <label class="letra_do_menu">Home</label></a>
                         <a href="#cardapio" class="w3-bar-item w3-button"> <img src="src/img/ico_bolo.png" class="foto_top" width="32px" height="32px" alt=""><label class="letra_do_menu">Comidas</label></a>
                         <a href="#contato" class="w3-bar-item w3-button"> <img src="src/img/entrega.png" class="foto_top" width="32px" height="32px" alt=""><label class="letra_do_menu">Pedidos</label>
                         </a>
@@ -61,8 +63,9 @@
                 e ao atendimento on-line. O nosso objetivo sempre foi claro: Atender às necessidades do público em geral, e por isso já temos em nosso cardápio opções integrais e zero lactose, sem contar que em breve também contaremos com opções de lanches
                 Veganos, Fitness e sem Glúten.</div>
         </div>
+        <hr>
         <!-- 1 comida -->
-        <div class="w3-row w3-padding-64" id="cardapio">
+        <div class="w3-row w3-padding-64" align="center" id="cardapio">
             <div class="w3-col m6 w3-padding-large w3-small" id="comida_img">
                 <img src="src/img/lasanha1.jpeg" class="w3-round w3-image w3-opacity-" alt="Table Setting" width="600" height="750">
             </div>
@@ -87,7 +90,7 @@
 
         <!-- 2 comida -->
 
-        <div class="w3-row w3-padding-64" id="bolo_red">
+        <div class="w3-row w3-padding-64" align="center" id="bolo_red">
             <div class="w3-col m6 w3-padding-large w3-small" id="comida_img">
                 <img src="src/img/morango2.jpeg" class="w3-round w3-image w3-opacity-" alt="Table Setting" width="600" height="750">
             </div>
@@ -110,7 +113,7 @@
         </div>
 
         <!-- 3 comida -->
-        <div class="w3-row w3-padding-64" id="torta_limon">
+        <div class="w3-row w3-padding-64" align="center" id="torta_limon">
             <div class=" w3-col m6 w3-padding-large w3-small" id="comida_img">
                 <img src="src/img/torta_de_limao.jpeg " class="w3-round w3-image w3-opacity- " alt="Table Setting " width="600 " height="750 ">
             </div>
@@ -134,7 +137,7 @@
         </div>
 
         <!-- 4 comida -->
-        <div class="w3-row w3-padding-64 ">
+        <div class="w3-row w3-padding-64 " align="center">
             <div class="w3-col m6 w3-padding-large w3-small  " id="comida_img">
                 <img src="src/img/bolo.jpeg " class="w3-round w3-image w3-opacity- " alt="Table Setting " width="600 " height="750 ">
             </div>
@@ -162,12 +165,37 @@
 
         <!-- 5 comida -->
         <div class="w3-row w3-padding-64 " align="center" id="torta_negresco">
-            <div class="w3-col m6 w3-padding-large w3-small " id="comida_img">
+            <div class="w3-col m6 w3-padding-large w3-small" id="comida_img">
                 <img src="src/img/bolo-negresco.jpeg " class="w3-round w3-image w3-opacity- " alt="Table Setting " width="600 " height="750 ">
             </div>
 
-            <div class="w3-col m6 w3-padding-large ">
+            <div class="w3-col m6 w3-padding-large">
                 <h1 class="w3-center ">Torta de Negresco Gelada:</h1><br>
+
+                <p class="w3-large ">Essa versão tem base feita a partir do próprio biscoito, recheio do mesmo sabor e cobertura de<span class="w3-tag w3-light-grey ">Chantilly. </span>
+                </p>
+                <div class="m6 " id="comida_imgoff">
+                    <img src="src/img/bolo-negresco.jpeg " class="w3-round w3-image w3-opacity- " alt="Table Setting " width="600 " height="750 ">
+                </div>
+
+                <p>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v11.0" nonce="1fIqLdXI"></script>
+                    <div class="fb-like" data-href="https://luizinhovi.github.io/Sweet-Cake-GC/#torta_negresco" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v11.0" nonce="bBUywLOd"></script>
+                    <div class="fb-comments" data-href="https://luizinhovi.github.io/Sweet-Cake-GC/#torta_negresco" data-width="" data-numposts="2"></div>
+                </p>
+            </div>
+        </div>
+        <!-- 6 comida -->
+        <div class="w3-row w3-padding-64 " align="center" id="copo_da_felicidade">
+            <div class="w3-col m6 w3-padding-large w3-small " id="comida_img">
+                <img src="src/img/image3.jpeg" class="w3-round w3-image w3-opacity- " alt="Table Setting " width="600 " height="750 ">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large ">
+                <h1 class="w3-center ">Copos da Felicidade</h1><br>
 
                 <p class="w3-large ">essa versão tem base feita a partir do próprio biscoito, recheio do mesmo sabor e cobertura de<span class="w3-tag w3-light-grey ">Chantilly. </span>
                 </p>
@@ -218,13 +246,13 @@
 
 
             </div>
-            <!-- <div class="w3-col l6 w3-padding-large ">
+            <div class="w3-col l6 w3-padding-large">
 
-                <video class="w3-round w3-image w3-opacity- " alt="Menu " width="100% " controls loop autoplay>
-                    <source src="src/video/cardapio.mp4 " type="video/mp4 ">
-                </video>
+                <div>
+                    <img src="src/img/cardapio.png" class="w3-round w3-image w3-opacity-" alt="">
+                </div>
 
-            </div> -->
+            </div>
         </div>
 
         <hr>
@@ -380,6 +408,7 @@
                         <option value="Torta de Negresco Gelada">Torta de Negresco Gelada</option>
                      
                 </select>
+                <p><input type="checkbox"> Confirmar o pedido </p>
                 <p><button class="w3-button w3-light-grey w3-section " id="enviar" type="submit ">Enviar pedido </button></p>
             </form>
         </div>
@@ -397,6 +426,9 @@
 
 
         </p>
+        <nav>
+            <button onclick="enviarMensagem()">teste whatsapp</button>
+        </nav>
     </footer>
 
 </body>
