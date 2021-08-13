@@ -1,5 +1,11 @@
     /*  */
     
+    #home {
+        position: relative;
+        width: 100%;
+        top: 30px;
+    }
+    
     #comida_imgoff {
         display: none;
     }

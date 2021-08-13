@@ -3,6 +3,9 @@
                 display: none;
                 font-size: 15px;
             }
+            #home {
+                top: 80px;
+            }
             #modo_cell1 {
                 width: 400px;
             }
@@ -33,11 +36,7 @@
                 display: none;
             }
             #tema1 {
-                position: relative;
-                top: 22px;
-                margin-left: 50%;
-                transform: translateX(-10%);
-                font-size: 22px;
+                display: none;
             }
             /* video do cardapio */
             iframe {
