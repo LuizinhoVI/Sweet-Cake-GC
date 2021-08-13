@@ -34,7 +34,7 @@
                     <a href="#sobre" class="w3-bar-item w3-button">sobre</a>
 
                     <div>
-                        <a href="#" class="w3-bar-item w3-button frango"><img src="src/img/logo (2).png" class="foto_top" alt="inicio" width="32px" height="32px"> <label class="letra_do_menu">Home</label></a>
+                        <a href="#" class="w3-bar-item w3-button "><img src="src/img/logo (2).png" class="foto_top" alt="inicio" width="32px" height="32px"> <label class="letra_do_menu">Home</label></a>
                         <a href="#cardapio" class="w3-bar-item w3-button"> <img src="src/img/ico_bolo.png" class="foto_top" width="32px" height="32px" alt=""><label class="letra_do_menu">Comidas</label></a>
                         <a href="#contato" class="w3-bar-item w3-button"> <img src="src/img/entrega.png" class="foto_top" width="32px" height="32px" alt=""><label class="letra_do_menu">Pedidos</label>
                         </a>
@@ -67,14 +67,19 @@
         <!-- 1 comida -->
         <div class="w3-row w3-padding-64" align="center" id="cardapio">
             <div class="w3-col m6 w3-padding-large w3-small" id="comida_img">
-                <img src="src/img/lasanha1.jpeg" class="w3-round w3-image w3-opacity-" alt="Table Setting" width="600" height="750">
+                <img src="src/img/lasanha1.jpeg" class="w3-round w3-image w3-opacity- frango_slid" alt="Table Setting" width="600" height="750">
+                <img src="src/img/lasanha.jpeg" class="w3-round w3-image w3-opacity- frango_slid" alt="Table Setting" width="600" height="750">
+                <!-- chamado do slider na função  -->
+
             </div>
             <div class="w3-col m6 w3-padding-large" id="cardapio" align="center">
                 <h1 class="w3-center" id="frango">Quiche de frango</h1><br>
 
                 <p class="w3-large" align="center">Quiche de frango COM Lactose: O Quiche de frango é uma base amanteigada coberta por frango cremoso, ervas especiais, milho, queijo, azeitonas e batata palha.</p>
                 <div class=" m6  " id="comida_imgoff">
-                    <img src="src/img/lasanha1.jpeg " class="w3-round w3-image w3-opacity- " alt="Table Setting " width="600 " height="750 ">
+                    <img src="src/img/lasanha.jpeg " class="w3-round w3-image w3-opacity- frango_slid1" alt="Table Setting " width="600 " height="750 ">
+                    <img src="src/img/lasanha1.jpeg " class="w3-round w3-image w3-opacity- frango_slid1" alt="Table Setting " width="600 " height="750 ">
+
                 </div>
 
                 <p>
@@ -430,7 +435,10 @@
             <button onclick="enviarMensagem()">teste whatsapp</button>
         </nav>
     </footer>
-
+    <!-- escript final de animação de slides -->
+    <script>
+        slid_frango();
+    </script>
 </body>
 
 </html>

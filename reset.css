@@ -37,7 +37,8 @@ h6 {
 
 /* fotos do menu de comida com slides */
 
-.frango {
+.frango_slid,
+.frango_slid1 {
     display: none;
 }
 
