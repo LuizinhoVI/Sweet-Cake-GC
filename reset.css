@@ -38,7 +38,17 @@ h6 {
 /* fotos do menu de comida com slides */
 
 .frango_slid,
-.frango_slid1 {
+.frango_slid1,
+.slid_bolo_red,
+.slid_bolo_red1,
+.slid_bolo_chocolate,
+.slid_bolo_chocolate1,
+.slid_torta_limon,
+.slid_torta_limon1,
+.slid_bolo_negresco,
+.slid_bolo_negresco1,
+.slid_copo_felicidade,
+.slid_copo_felicidade1 {
     display: none;
 }
 
