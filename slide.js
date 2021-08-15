@@ -19,7 +19,7 @@ function slid_frango() {
     x[numerador[0] - 1].style.display = "block";
     x1[numerador[0] - 1].style.display = "block";
 
-    setTimeout(slid_frango, 2000); // Change image every 2 seconds
+    setTimeout(slid_frango, 2500); // Change image every 2 seconds
 }
 
 function slid_bolo_red() {
@@ -41,7 +41,7 @@ function slid_bolo_red() {
     x[numerador[1] - 1].style.display = "block";
     x1[numerador[1] - 1].style.display = "block";
 
-    setTimeout(slid_bolo_red, 2000); // Change image every 2 seconds
+    setTimeout(slid_bolo_red, 2600); // Change image every 2 seconds
 }
 
 function slid_torta_limon() {
@@ -64,7 +64,7 @@ function slid_torta_limon() {
     x[numerador[2] - 1].style.display = "block";
     x1[numerador[2] - 1].style.display = "block";
 
-    setTimeout(slid_torta_limon, 2000); // Change image every 2 seconds
+    setTimeout(slid_torta_limon, 2800); // Change image every 2 seconds
 }
 
 function slid_bolo_chocolate() {
@@ -87,7 +87,7 @@ function slid_bolo_chocolate() {
     x[numerador[3] - 1].style.display = "block";
     x1[numerador[3] - 1].style.display = "block";
 
-    setTimeout(slid_bolo_chocolate, 2000); // Change image every 2 seconds
+    setTimeout(slid_bolo_chocolate, 2100); // Change image every 2 seconds
 }
 
 function slid_bolo_negresco() {
@@ -110,7 +110,7 @@ function slid_bolo_negresco() {
     x[numerador[4] - 1].style.display = "block";
     x1[numerador[4] - 1].style.display = "block";
 
-    setTimeout(slid_bolo_negresco, 2000); // Change image every 2 seconds
+    setTimeout(slid_bolo_negresco, 2200); // Change image every 2 seconds
 }
 
 function slid_copo_felicidade() {
@@ -133,5 +133,5 @@ function slid_copo_felicidade() {
     x[numerador[5] - 1].style.display = "block";
     x1[numerador[5] - 1].style.display = "block";
 
-    setTimeout(slid_copo_felicidade, 2000); // Change image every 2 seconds
+    setTimeout(slid_copo_felicidade, 2300); // Change image every 2 seconds
 }
