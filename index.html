@@ -30,7 +30,7 @@
             <div class="w3-right w3-small" id="menu-box">
                 <div id="modo_cell1">
                     <a href="#contato" class="w3-bar-item w3-button">Meu pedido</a>
-                    <a href="#contato" class="w3-bar-item w3-button">Ingredientes</a>
+                    <a href="#ingredientes1" class="w3-bar-item w3-button">Ingredientes</a>
                     <a href="#cardapio" class="w3-bar-item w3-button">Cardápio</a>
                     <a href="#sobre" class="w3-bar-item w3-button">sobre</a>
 
@@ -282,7 +282,7 @@
 
             </div>
         </div>
-
+        <br id="ingredientes1">
         <hr>
         <!--ingredientes----------------------------------------------------------------------------------------- -->
 
@@ -336,14 +336,9 @@
             </div>
 
         </div>
-        <hr>
 
 
-        <!-- COMENTARIOS DE CLIENTES  -->
-        <div class="w3-container" id="comentarios">
-
-        </div>
-        <!-- Contact Section -->
+        <!---- endereço ------------------------------------------ -->
         <div class="w3-container w3-padding-64 ">
             <hr>
             <br>
@@ -354,6 +349,9 @@
             <p class="w3-text-blue-grey w3-large "><b>Capela - SE</b></p>
             <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.07649940590798!2d-37.053040974401966!3d-10.510236464681164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x705694dce44cf9b%3A0xb0f9492781a1cddb!2sCapela!5e1!3m2!1spt-BR!2sbr!4v1628089801664!5m2!1spt-BR!2sbr "
                     width="100% " height="300px " style="border:0; " allowfullscreen=" " loading="lazy "></iframe></p>
+
+            <hr>
+
             <h1 id="contato">Meu pedido</h1>
             <h4>! Seu pedido sera direcionado e enviado via <span> Whatsapp após o Envio</span> ! </h4>
             <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
@@ -363,10 +361,12 @@
                 <!-- <p><input class="w3-input w3-padding-16 " type="email " placeholder="Email" required name="email "></p> -->
                 <p><input class="w3-input w3-padding-16 " type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="79 + Celular" maxlength="11" minlength="9" required name="People "></p>
                 <!-- endereço -->
-                <p><input type="text" class="w3-input w3-padding-16 " placeholder="Endereço"></p>
+                <p><input type="text" id="rua" class="w3-input w3-padding-16 " placeholder="Endereço"></p>
                 <p></p>
-
-
+                <!-- numero da casa -->
+                <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="nª" maxlength="10" required name="numero-casa"></p>
+                <!-- referencia -->
+                <p><input type="text" id="referencia" placeholder="Referência" class="w3-input w3-padding-16"></p>
 
                 <!-- entrada dos pratos  -->
                 <p> <select class="w3-input w3-padding-16 " onchange="escolher_prato()" required name="list " id="tipo_prato" required="true">

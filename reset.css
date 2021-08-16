@@ -67,21 +67,16 @@ h6 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#copo_massa {
+#copo_massa,
+#copo_caldas,
+#rua_numero {
     float: left;
     width: 50%;
 }
 
-#copo_cobertura {
-    width: 50%;
-}
-
-#copo_caldas {
-    float: left;
-    width: 50%;
-}
-
-#copo_recheio {
+#copo_cobertura,
+#copo_recheio,
+#referencia {
     width: 50%;
 }
 
