@@ -1,5 +1,3 @@
-    /*  */
-    
     #home {
         position: relative;
         width: 100%;
@@ -10,10 +8,12 @@
         display: none;
     }
     
+    #letra_mn {}
+    
     .letra_do_menu {
         position: absolute;
         text-align: left;
-        left: 10px;
+        left: 8px;
         top: 60px;
         font-size: 10px;
     }
