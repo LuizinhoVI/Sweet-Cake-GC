@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="menu.css">
 <link rel="stylesheet" href="responsivo.css">
-<script src="logica.js"></script>
+<script src="PRATO.js"></script>
 <script src="api_whatsapp.js"></script>
 <script src="slide.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -356,29 +356,30 @@
             <h4>! Seu pedido sera direcionado e enviado via <span> Whatsapp após o Envio</span> ! </h4>
             <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
             <br>
-            <form action="#" target=" ">
-                <p><input class="w3-input w3-padding-16 " type="text " placeholder="Nome " required name="Name "></p>
+            <form action="#" target="_self" autocomplete="on">
+                <p><input class="w3-input w3-padding-16 " type="text " placeholder="Nome " required name="Name " alt="digita seu nome "></p>
                 <!-- <p><input class="w3-input w3-padding-16 " type="email " placeholder="Email" required name="email "></p> -->
-                <p><input class="w3-input w3-padding-16 " type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="79 + Celular" maxlength="11" minlength="9" required name="People "></p>
+                <!-- numero de telefone -->
+                <p><input class="w3-input w3-padding-16 " type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="Celular" maxlength="11" minlength="9" required name="People "></p>
                 <!-- endereço -->
-                <p><input type="text" id="rua" class="w3-input w3-padding-16 " placeholder="Endereço ex:Rua ..."></p>
+                <p><input type="text" id="rua" class="w3-input w3-padding-16 " placeholder="Endereço da rua..."></p>
                 <p></p>
                 <!-- numero da casa -->
-                <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" maxlength="10" required name="numero-casa"></p>
+                <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" max="99999" required pattern="([0-9]{9})" name="numero-casa"></p>
                 <!-- referencia -->
                 <p><input type="text" id="referencia" placeholder="Referência" class="w3-input w3-padding-16"></p>
 
-                <!-- entrada dos pratos  -->
+                <!-- escolhas das comidas e sub-comidas  -->
                 <p> <select class="w3-input w3-padding-16 " onchange="escolher_prato()" required name="list " id="tipo_prato" required="true">
             
-                    <option value="null">Escolha o prato</option>
+                    <option value="null">Sua comida</option>
                     <option value="Doce">Doce</option>
                     <option value="Bolo">Bolo</option>
                     <option value="Salgado">Salgado</option>
                     <option value="Gourmet">Gourmet e Tradicional</option>
                     <option value="copo">copo da felicidade</option>
             
-                </select></p>
+                  </select></p>
                 <select class="w3-input w3-padding-16 " required name="list " id="copo_massa">
                         
                         <option value="Copos da Felicidade ">Massa</option>
@@ -388,7 +389,7 @@
                         <option value="Copos da Felicidade ">Massa laranja </option>
                         <option value="Copos da Felicidade ">Massa cenoura</option>
                         
-                </select>
+                    </select>
                 <select class="w3-input w3-padding-16 " required name="list " id="copo_cobertura">
                         <option value="Copos da Felicidade ">Coberturas</option>
                         <option value="Copos da Felicidade ">Frutais: (Morangos, maracujá, cerejas e etc)</option>
@@ -424,17 +425,17 @@
                         
                         <option value="Copos da Felicidade ">estamos atualizando no sistema ...</option>
                 </select>
-                <select class="w3-input w3-padding-16 " list="comida " placeholder="selecione o pedido" required name="list " id="salgado">
+                <select class="w3-input w3-padding-16 " placeholder="selecione o pedido" required name="list " id="salgado">
                         <option value="Quiche de frango com Lactose">Quiche de frango COM Lactose</option>
                         <option value="Quiche de frango sem Lactose">Quiche de frango SEM Lactose</option>
                      
                 </select>
-                <select class="w3-input w3-padding-16 " list="comida " placeholder="selecione o pedido" required name="list " id="bolo">
+                <select class="w3-input w3-padding-16 " placeholder="selecione o pedido" required name="list " id="bolo">
                         <option value="Mini Bolo Vulcão">Mini Bolo Vulcão</option>
                         <option value="Bolo Red velvet">Bolo Red velvet</option>
                      
                 </select>
-                <select class="w3-input w3-padding-16 " list="comida " placeholder="selecione o pedido" required name="list " id="gourmet">
+                <select class="w3-input w3-padding-16 " placeholder="selecione o pedido" required name="list " id="gourmet">
                         <option value="Brownie ">Escolha o prato</option>
                         <option value="Brownie ">Brownie </option>
                         <option value="Red velvet">Red velvet</option>
@@ -442,9 +443,25 @@
                         <option value="Torta de Negresco Gelada">Torta de Negresco Gelada</option>
                      
                 </select>
-                <p><input type="checkbox" required> Confirmar o pedido </p>
+
+                <!-- opções de cartão de credito ou pagamento a vista  -->
+                <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento">
+                        <option value="null">Modo de pagamento</option>
+                        <option value="A vista">A VÍSTA</option>
+                        <option value="Cartão">CARTÃO</option>
+                    </select>
+                <!-- pagamento a vista -->
+                <p> <input type="number" id="valor_pagamento" placeholder="Digita o Valor que ira pagar" class="w3-input w3-padding-16  ">
+                </p>
+                <!-- agamento a vista calculo do troco  -->
+                <p> <input type="number" id="troco" placeholder="valor do seu troco " class="w3-input w3-padding-16  ">
+                </p>
+                <p align="center"><input type="checkbox" id="pedido" required><label style="font-size: 20px;" for="pedido"> Confirma o pedido</label></p>
                 <hr>
-                <p><button class="w3-button w3-light-grey w3-section " id="enviar" type="submit ">Enviar pedido </button></p>
+
+                <br>
+                <!-- botão de enviar  -->
+                <p align="center "><input class="w3-button w3-light-grey w3-section " id="enviar " type="submit " value="Enviar Pedido "> </p>
             </form>
         </div>
         <!-- End page content -->
@@ -455,14 +472,14 @@
         <h2>“Carinho e doçura em tudo que faz”</h2><br>
 
         <h4>Redes sociais</h4>
-        <p class="w3-hover-text-">
+        <p class="w3-hover-text- ">
 
-            <a href="https://www.instagram.com/sweet_cakegc/ " target="_blank" class="w3-bar-item w3-button "><img src="https://image.flaticon.com/icons/png/512/733/733558.png" width="50" height="50" alt=""></a>
+            <a href="https://www.instagram.com/sweet_cakegc/ " target="_blank " class="w3-bar-item w3-button "><img src="https://image.flaticon.com/icons/png/512/733/733558.png " width="50 " height="50 " alt=" "></a>
 
 
         </p>
         <nav>
-            <button onclick="enviarMensagem()">teste whatsapp</button>
+            <button onclick="enviarMensagem() ">teste whatsapp</button>
         </nav>
     </footer>
     <!-- escript final de animação de slides -->

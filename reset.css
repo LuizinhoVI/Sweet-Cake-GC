@@ -69,7 +69,8 @@ h6 {
 
 #copo_massa,
 #copo_caldas,
-#rua_numero {
+#rua_numero,
+#valor_pagamento {
     float: left;
     width: 50%;
 }
