@@ -70,7 +70,8 @@ h6 {
 #copo_massa,
 #copo_caldas,
 #rua_numero,
-#valor_pagamento {
+#valor_pagamento,
+#troco {
     float: left;
     width: 50%;
 }
