@@ -57,8 +57,11 @@ function escolher_prato() {
         } else { bolo_parte.style.display = "none" }
         if (bolo_parte.value == "2") {
             total_compras = 7;
-            compras.value = "R$7,00";
+            compras.value = "R$ 7,00";
             console.log(compras.value)
+        } else {
+
+            compras.value = "R$ 0,00";
         }
 
     } else {
@@ -81,8 +84,16 @@ function escolher_prato() {
         copo_cobertura.style.display = "none"
         copo_caldas.style.display = "none"
     }
+
 }
 
+
+
+
+
+
+
+// função para limitar os caracteres da caide entrada dos valores 
 function numero_max(object) {
     if (object.value.length > object.maxLength)
         object.value = object.value.slice(0, object.maxLength)

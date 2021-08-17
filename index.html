@@ -368,7 +368,7 @@
                 <!-- numero da casa -->
                 <p><input type="text" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" max="99999" required pattern="([0-9]{9})" name="numero-casa"></p>
                 <!-- referencia -->
-                <p><input type="text" id="referencia" placeholder="Referência" class="w3-input w3-padding-16"></p>
+                <p><input type="text" id="referencia" required placeholder="Referência" class="w3-input w3-padding-16"></p>
 
                 <!-- escolhas das comidas e sub-comidas  -->
                 <p> <select class="w3-input w3-padding-16" onchange="escolher_prato()" required name="list" id="tipo_prato" required="true">
@@ -438,7 +438,7 @@
                         <option value="1">Quiche de frango SEM Lactose</option>
                      
                 </select>
-                <br>
+
                 <!-- bolos -->
                 <select class="w3-input w3-padding-16" onchange="escolher_prato()" placeholder="selecione o pedido" required id="bolo">
                         <option value="0">seleciona</option>
@@ -446,7 +446,7 @@
                         <option value="2">Bolo Red velvet</option>
                      
                 </select>
-                <br>
+
                 <!-- pertence as escolhas do bolo  -->
                 <select class="w3-input w3-padding-16" onchange="escolher_prato()" name="" id="bolo_parte">
                     <option value="0">seleciona</option>
@@ -463,9 +463,9 @@
                         <option value="Torta de Negresco Gelada">Torta de Negresco Gelada</option>
                      
                 </select>
-                <br>
+
                 <button>Adicionar +</button>
-                <br>
+
                 <!-- opções de cartão de credito ou pagamento a vista  -->
                 <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento">
                         <option value="null">Modo de pagamento</option>
