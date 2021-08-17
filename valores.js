@@ -52,26 +52,39 @@ function escolher_prato() {
         salgado.style.display = "block"
 
     } else { salgado.style.display = "none" }
+
+
     // vai mostrar as opções  do bolo
     if (tipo == "Bolo") {
         bolo.style.display = "block"
         if (bolo.value == "2") {
             bolo_parte.style.display = "block"
-        } else { bolo_parte.style.display = "none" }
+        }
         if (bolo_parte.value == "2") {
             total_compras = 7;
             compras.value = "R$ 7,00";
-            console.log(compras.value)
-        } else {
+
+        }
+        if (bolo_parte.value == "1") {
+            total_compras = 70;
+            compras.value = "R$ 70,00";
+
+        }
+        if (bolo_parte.value == 0) {
             compras.value = "R$ 0,00";
             total_compras = 0;
         }
 
     } else {
         bolo.style.display = "none"
-
+        bolo.value = 0;
+        bolo_parte.style.display = "none"
+        bolo_parte.value = 0;
+        compras.value = "R$ 0,00";
+        total_compras = 0;
     }
 
+    console.log(total_compras)
 
     if (tipo == "Gourmet") {
         gourmet.style.display = "block"

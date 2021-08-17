@@ -358,6 +358,9 @@
             <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
             <br>
             <form action="#" target="_self" autocomplete="on">
+                <p>
+                    <h4 align="center">Seus dados</h4>
+                </p>
                 <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name" alt="digita seu nome"></p>
                 <!-- <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p> -->
                 <!-- numero de telefone -->
@@ -369,7 +372,9 @@
                 <p><input type="text" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" max="99999" required pattern="([0-9]{9})" name="numero-casa"></p>
                 <!-- referencia -->
                 <p><input type="text" id="referencia" required placeholder="Referência" class="w3-input w3-padding-16"></p>
-
+                <p>
+                    <h4 align="center">Comidas</h4>
+                </p>
                 <!-- escolhas das comidas e sub-comidas  -->
                 <p> <select class="w3-input w3-padding-16" onchange="escolher_prato()" required name="list" id="tipo_prato" required="true">
             
@@ -448,7 +453,7 @@
                 </select></p>
 
                 <!-- pertence as escolhas do bolo  -->
-                <P> <select class="w3-input w3-padding-16" onchange="escolher_prato()" name="" id="bolo_parte">
+                <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="bolo_parte">
                     <option value="0">seleciona</option>
                     <option value="1">Inteiro R$ 70,00</option>
                     <option value="2">Fatia R$ 7,00</option>
@@ -467,9 +472,12 @@
 
                 <p><button>Adicionar +</button>
                 </p>
+                <p>
+                    <h4 align="center">Mode de pagamento</h4>
+                </p>
                 <!-- opções de cartão de credito ou pagamento a vista  -->
                 <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento">
-                        <option value="null">Modo de pagamento</option>
+                        <option value="null">Selecionar</option>
                         <option value="A vista">A VÍSTA</option>
                         <option value="Cartão">PIX</option>
                     </select>
