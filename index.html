@@ -382,7 +382,7 @@
             
                   </select></p>
                 <!-- massa -->
-                <select class="w3-input w3-padding-16" required name="list" id="copo_massa">
+                <p><select class="w3-input w3-padding-16" required name="list" id="copo_massa">
                         
                         <option value="Copos da Felicidade">Massa</option>
                         <option value="Copos da Felicidade">Massa Red Velvet</option>
@@ -391,19 +391,19 @@
                         <option value="Copos da Felicidade">Massa laranja </option>
                         <option value="Copos da Felicidade">Massa cenoura</option>
                         
-                    </select>
-                <br>
+                    </select></p>
+
                 <!-- coberturas -->
-                <select class="w3-input w3-padding-16" required name="list" id="copo_cobertura">
+                <p><select class="w3-input w3-padding-16" required name="list" id="copo_cobertura">
                         <option value="Copos da Felicidade">Coberturas</option>
                         <option value="Copos da Felicidade">Frutais: (Morangos, maracujá, cerejas e etc)</option>
                         <option value="Copos da Felicidade">Recheio tradicional</option>
                         <option value="Copos da Felicidade">Chantilly</option>
                 
                         
-                </select>
+                </select></p>
                 <!-- caldas -->
-                <select class="w3-input w3-padding-16" required name="list" id="copo_caldas">
+                <p> <select class="w3-input w3-padding-16" required name="list" id="copo_caldas">
                         
                         
                        
@@ -412,9 +412,9 @@
                         <option value="Copos da Felicidade">Maracujá</option>
                 
                         
-                    </select>
+                    </select></p>
                 <!-- recheio -->
-                <select class="w3-input w3-padding-16" required name="list" id="copo_recheio">               
+                <p> <select class="w3-input w3-padding-16" required name="list" id="copo_recheio">               
                         <option value="Copos da Felicidade">Recheio (Ambos os recheios tem opções zero lactose)</option>
                         <option value="Copos da Felicidade">Amendoim </option>
                         <option value="Copos da Felicidade">Castanha</option>
@@ -426,36 +426,36 @@
                         <option value="Copos da Felicidade">Creme Brûleé</option>
                         <option value="Copos da Felicidade">Creme de oreo</option>
                         <option value="Copos da Felicidade">Limão</option>
-                </select>
+                </select></p>
 
-                <select class="w3-input w3-padding-16" required name="list" id="doce">
+                <p> <select class="w3-input w3-padding-16" required name="list" id="doce">
                         
                         <option value="Copos da Felicidade">estamos atualizando no sistema ...</option>
-                </select>
+                </select></p>
                 <!-- salgado -->
-                <select class="w3-input w3-padding-16" placeholder="selecione o pedido" required name="list" id="salgado">
+                <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" required name="list" id="salgado">
                         <option value="0">Quiche de frango COM Lactose</option>
                         <option value="1">Quiche de frango SEM Lactose</option>
                      
-                </select>
+                </select></p>
 
                 <!-- bolos -->
-                <select class="w3-input w3-padding-16" onchange="escolher_prato()" placeholder="selecione o pedido" required id="bolo">
+                <p> <select class="w3-input w3-padding-16" onchange="escolher_prato()" placeholder="selecione o pedido" required id="bolo">
                         <option value="0">seleciona</option>
                         <option value="1">Mini Bolo Vulcão</option>
                         <option value="2">Bolo Red velvet</option>
                      
-                </select>
+                </select></p>
 
                 <!-- pertence as escolhas do bolo  -->
-                <select class="w3-input w3-padding-16" onchange="escolher_prato()" name="" id="bolo_parte">
+                <P> <select class="w3-input w3-padding-16" onchange="escolher_prato()" name="" id="bolo_parte">
                     <option value="0">seleciona</option>
                     <option value="1">Inteiro R$ 70,00</option>
                     <option value="2">Fatia R$ 7,00</option>
                     
-                </select>
+                </select></P>
                 <!-- copo da felicidade -->
-                <select class="w3-input w3-padding-16" placeholder="selecione o pedido" required name="list" id="gourmet">
+                <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" required name="list" id="gourmet">
                         <option value="Brownie">Escolha o prato</option>
                         <option value="Brownie">Brownie </option>
                         <option value="Red velvet">Red velvet</option>
@@ -463,16 +463,17 @@
                         <option value="Torta de Negresco Gelada">Torta de Negresco Gelada</option>
                      
                 </select>
+                </p>
 
-                <button>Adicionar +</button>
-
+                <p><button>Adicionar +</button>
+                </p>
                 <!-- opções de cartão de credito ou pagamento a vista  -->
                 <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento">
                         <option value="null">Modo de pagamento</option>
                         <option value="A vista">A VÍSTA</option>
                         <option value="Cartão">PIX</option>
                     </select>
-                <br>
+
 
                 <p><label for="" id="troco_letra">Dinheiro em espécie</label></p>
                 <p><label for="" id="troco_letra">Total das compras</label></p>
@@ -480,7 +481,7 @@
 
                 <!-- digita o valor que ira pagar à vista -->
                 <p>
-                    <input type="number" oninput="meu_valor()" maxlength="2" min="1" max="100" id="valor_pagamento" placeholder="Digita aqui..." class=" w3-input w3-padding-16">
+                    <input type="number" oninput="meu_valor()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" placeholder="Digita aqui..." class=" w3-input w3-padding-16">
                 </p>
 
                 <!-- compras -->

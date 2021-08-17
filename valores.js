@@ -8,7 +8,6 @@ function meu_valor() {
     var total = document.getElementById("total");
 
 
-    var compras = document.getElementById("compras");
 
 
 
@@ -19,6 +18,7 @@ function meu_valor() {
         // colocarar dentro da caixa de texto o valor total 
         total.value = "R$ " + valor_total + ",00";
     } else { total.value = "R$ 0.00" }
+
 }
 
 
@@ -94,11 +94,12 @@ function escolher_prato() {
 
 
 // função para limitar os caracteres da caide entrada dos valores 
+// no object tem que colocar o this
 function numero_max(object) {
     if (object.value.length > object.maxLength)
         object.value = object.value.slice(0, object.maxLength)
 }
-
+// no evt tem que colocar no event
 function numero_max1(evt) {
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
