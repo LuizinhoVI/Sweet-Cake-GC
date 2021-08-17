@@ -57,7 +57,9 @@ h6 {
 
 #doce,
 #salgado,
+#salgado_parte,
 #bolo,
+#bolo_parte,
 #gourmet,
 #copo_massa,
 #copo_recheio,
@@ -67,13 +69,25 @@ h6 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* espaços entre os botões de contato   */
+
 #copo_massa,
 #copo_caldas,
-#rua_numero,
-#valor_pagamento,
-#troco {
+#rua_numero {
     float: left;
     width: 50%;
+}
+
+#compras,
+#valor_pagamento,
+#troco_letra {
+    float: left;
+    width: 40%;
+}
+
+#total {
+    width: 20%;
 }
 
 #copo_cobertura,
