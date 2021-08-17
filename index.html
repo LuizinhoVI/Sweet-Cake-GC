@@ -438,25 +438,39 @@
                         <option value="Copos da Felicidade">estamos atualizando no sistema ...</option>
                 </select></p>
                 <!-- salgado -->
-                <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" required name="list" id="salgado">
-                        <option value="0">Quiche de frango COM Lactose</option>
-                        <option value="1">Quiche de frango SEM Lactose</option>
+                <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" oninput="escolher_prato()" required name="list" id="salgado">
+                        <option value="0">Selecionar</option>
+                        <option value="1">Quiche de frango COM Lactose</option>
+                        <option value="2">Quiche de frango SEM Lactose</option>
                      
                 </select></p>
+                <!--escolhas do quiche de frango  com lactose -->
+                <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="salgado_parte">
+                    <option value="0">seleciona</option>
+                    <option value="1">Inteiro R$ 27,00</option>
+                    <option value="2">Fatia R$ 4,50</option>
+                    
+                </select></P>
 
                 <!-- bolos -->
                 <p> <select class="w3-input w3-padding-16" onchange="escolher_prato()" placeholder="selecione o pedido" required id="bolo">
                         <option value="0">seleciona</option>
                         <option value="1">Mini Bolo Vulcão</option>
                         <option value="2">Bolo Red velvet</option>
-                     
+
                 </select></p>
 
-                <!-- pertence as escolhas do bolo  -->
+                <!-- escolhas do bolo  -->
                 <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="bolo_parte">
                     <option value="0">seleciona</option>
                     <option value="1">Inteiro R$ 70,00</option>
                     <option value="2">Fatia R$ 7,00</option>
+                    
+                </select></P>
+                <P> <select class="w3-input w3-padding-16" onchange="escolher_prato()" name="" id="bolo_mini">
+                    <option value="0">seleciona</option>
+                    <option value="1">Inteiro R$ 15,00</option>
+                    
                     
                 </select></P>
                 <!-- copo da felicidade -->
