@@ -12,12 +12,15 @@ function meu_valor() {
 
 
 
-    if (dinheiro.value > total_compras && dinheiro.value <= 100) {
-
-        valor_total = (dinheiro.value - total_compras);
-        // colocarar dentro da caixa de texto o valor total 
-        total.value = "R$ " + valor_total + ",00";
-    } else { total.value = "R$ 0.00" }
+    if (dinheiro.value > total_compras && dinheiro.value <= 900) {
+        if (total_compras != 0) {
+            valor_total = (dinheiro.value - total_compras);
+            // colocarar dentro da caixa de texto o valor total 
+            total.value = "R$ " + valor_total + ",00";
+        } else {
+            total.value = "R$ 0,00";
+        }
+    } else { total.value = "R$ 0,00" }
 
 }
 
@@ -60,8 +63,8 @@ function escolher_prato() {
             compras.value = "R$ 7,00";
             console.log(compras.value)
         } else {
-
             compras.value = "R$ 0,00";
+            total_compras = 0;
         }
 
     } else {
