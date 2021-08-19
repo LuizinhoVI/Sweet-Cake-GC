@@ -99,3 +99,18 @@ h6 {
 
 
 /* ----------------------------------------------------------------------- fim */
+
+
+/* cores dos ingredientes de  */
+
+.castanho {
+    color: #d2b48c;
+}
+
+.amendoim {
+    color: #cd853f;
+}
+
+.teste {
+    display: block;
+}

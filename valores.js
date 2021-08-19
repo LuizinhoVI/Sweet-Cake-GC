@@ -86,20 +86,21 @@ function escolher_prato() {
 
 
 
-        if (bolo.value == "0") {
-            bolo_parte.style.display = "none"
-            bolo_mini.style.display = "none"
-        }
-        if (bolo_mini.value == "1") {
-            total_compras = 15;
-            compras.value = "R$ 15,00";
 
-        }
         if (bolo.value == "1") {
             bolo_mini.style.display = "block"
             bolo_parte.style.display = "none"
             total_compras = 0;
             compras.value = "R$ 00,00";
+        }
+        if (bolo_mini.value == "1") {
+            total_compras = 15;
+            compras.value = "R$ 15,00";
+            alert("teste")
+
+        } else {
+            bolo_parte.style.display = "none"
+            total_compras =
         }
 
         if (bolo.value == "2") {
@@ -133,15 +134,17 @@ function escolher_prato() {
         bolo_parte.value = 0;
         compras.value = "R$ 0,00";
         total_compras = 0;
+
+
     }
 
 
-    console.log(total_compras)
 
     if (tipo == "Gourmet") {
         gourmet.style.display = "block"
     } else { gourmet.style.display = "none" }
     if (tipo == "copo") {
+
         copo_massa.style.display = "block";
         copo_recheio.style.display = "block";
         copo_cobertura.style.display = "block";
@@ -152,6 +155,7 @@ function escolher_prato() {
         copo_cobertura.style.display = "none"
         copo_caldas.style.display = "none"
     }
+    console.log(total_compras);
 }
 
 
