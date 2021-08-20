@@ -98,9 +98,9 @@
 
                     <select class="w3-input w3-padding-16" onchange="escolher_prato()" required name="list" id="tipo_prato">
                         <optgroup label="PRATOS">
-                        <option value="">Selecionar...</option>
-                    <option value="Gourmet">Gourmet e Tradicional</option>
-                    <option value="Bolo">Bolo </option>
+                        <option value="0">Selecionar...</option>
+                        <option value="Bolo">Bolo </option>
+                    <option value="Torta">Torta</option>
                     <option value="Salgado">Salgado</option>
                     <option value="Doce">Doce</option>
                     <option value="copo">copo da felicidade</option>
@@ -162,14 +162,32 @@
                         <option value="Copos da Felicidade">Recheio Creme de Limão</option>
                     </optgroup>
                     </select></p>
-
-                <p> <select class="w3-input w3-padding-16" required name="list" id="gourmet">
+                <!--  torta-->
+                <p> <select class="w3-input w3-padding-16" required name="list" id="Torta" oninput="escolher_prato()">
                         
-                        <option value="Copos da Felicidade">estamos atualizando no sistema ...</option>
+                    <option value="limao">Torta de Limão Gelada</option>
+                        <option value="negresco">Torta de Negresco Gelada</option>
+
                 </select></p>
+                <!-- torta de limão -->
+                <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="torta_valor">
+                    <optgroup label="PREÇO">
+                    <option value="1">Inteiro R$ 24,00</option>
+                    <option value="2">Fatia R$ 4,00</option>
+                </optgroup>
+                </select></P>
+                <!-- torta de negresco -->
+                <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="torta_valor1">
+                    <optgroup label="PREÇO">
+                    <option value="1">Inteiro R$ 35,00</option>
+                    <option value="2">Fatia R$ 7,00</option>
+                </optgroup>
+                </select></P>
+
+
+
+
                 <!-- salgado -->
-
-
                 <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" oninput="escolher_prato()" required name="list" id="salgado">
                         <optgroup label="SALGADO">
 
@@ -233,10 +251,19 @@
                     <optgroup label="PREÇOS">
 
                         <option value="1">Inteiro R$ 3,00</option>
-                       
                     </optgroup>
                     
                 </select></P>
+
+                <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="copo_valor">
+                    <optgroup label="PREÇO">
+                    <option value="1">Inteiro R$ 13,00</option>
+                   
+                </optgroup>
+                </select></P>
+
+
+
                 <p>
                     <button>Adicionar +</button>
                 </p>

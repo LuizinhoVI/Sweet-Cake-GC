@@ -9,10 +9,6 @@ function meu_valor() {
     var total = document.getElementById("total");
 
 
-
-
-
-
     if (dinheiro.value > total_compras && dinheiro.value <= 900) {
         if (total_compras != 0) {
             valor_total = (dinheiro.value - total_compras);
@@ -40,7 +36,10 @@ function escolher_prato() {
     var bolo = document.getElementById("bolo");
     var bolo_parte = document.getElementById("bolo_parte");
     var bolo_mini = document.getElementById("bolo_mini");
-    var gourmet = document.getElementById("gourmet");
+    var torta = document.getElementById("Torta");
+    var torta_valor = document.getElementById("torta_valor");
+    var torta_valor1 = document.getElementById("torta_valor1");
+    var copo_valor = document.getElementById("copo_valor");
     var copo_caldas = document.getElementById("copo_caldas");
     var copo_massa = document.getElementById("copo_massa");
     var copo_recheio = document.getElementById("copo_recheio");
@@ -50,8 +49,65 @@ function escolher_prato() {
     //  var compras = document.getElementById("troco");
 
 
+    if (tipo == "0") {
+        compras.value = "R$ 00,00"
+        total_compras = 0;
+    }
+
+
+    // TIPO TORTA
+    if (tipo == "Torta") {
+        torta.style.display = "block";
+
+
+        if (torta.value == "limao") {
+            torta_valor.style.display = "block";
+            torta_valor1.style.display = "none";
+
+            if (torta_valor.value == "1") {
+                compras.value = "R$ 24,00";
+                total_compras = 24;
+            }
+            if (torta_valor.value == "2") {
+                compras.value = "R$ 4,00";
+                total_compras = 4;
+            }
+
+
+        }
+
+
+        if (torta.value == "negresco") {
+            torta_valor1.style.display = "block";
+            torta_valor.style.display = "none";
+
+            if (torta_valor1.value == "1") {
+                compras.value = "R$ 35,00";
+                total_compras = 35;
+            }
+            if (torta_valor1.value == "2") {
+                compras.value = "R$ 7,00";
+                total_compras = 7;
+            }
+        }
+
+
+    } else {
+        torta.style.display = "none"
+        torta_valor.style.display = "none"
+        torta_valor1.style.display = "none"
+
+
+    }
+
+
+
+
+
+    // TIPO DOCE
     if (tipo == "Doce") {
         doce.style.display = "block"
+
 
 
         if (doce.value == "1") {
@@ -64,11 +120,12 @@ function escolher_prato() {
 
         doce.style.display = "none"
         doce_valor.style.display = "none"
-
+            // compras.value = "R$ 00,00";
+            // total_compras = 0;
     }
 
 
-    //  TIPO DOCE  
+    //  TIPO  SALGADO
     if (tipo == "Salgado") {
         salgado.style.display = "block"
         bolo.style.display = "none"
@@ -96,7 +153,7 @@ function escolher_prato() {
             salgado_parte.style.display = "block";
             salgado_com.style.display = "none";
             total_compras = 0;
-            compras.value = "R$ 00,00";
+
 
             if (salgado_parte.value == "1") {
                 total_compras = 24;
@@ -113,12 +170,12 @@ function escolher_prato() {
         salgado.style.display = "none"
         salgado_parte.style.display = "none"
         salgado_com.style.display = "none"
-        compras.value = "R$ 00,00";
+            // compras.value = "R$ 00,00";
 
     }
 
 
-    // vai mostrar as opções  do bolo
+    // TIPO BOLO 
     if (tipo == "Bolo") {
         bolo.style.display = "block"
         salgado.style.display = "none"
@@ -171,22 +228,39 @@ function escolher_prato() {
     }
 
 
-
+    // TIPO COPO 
     if (tipo == "copo") {
-        gourmet.style.display = "block"
-    } else { gourmet.style.display = "none" }
-    if (tipo == "copo") {
+        copo_valor.style.display = "block"
 
-        copo_massa.style.display = "block";
-        copo_recheio.style.display = "block";
-        copo_cobertura.style.display = "block";
-        copo_caldas.style.display = "block";
+        if (copo_valor.value == "1") {
+            copo_massa.style.display = "block"
+            copo_cobertura.style.display = "block"
+            copo_recheio.style.display = "block"
+            copo_caldas.style.display = "block"
+            compras.value = "R$ 13,00";
+            total_compras = 13;
+        }
+
+
+
+
+
+
+
+
     } else {
+        copo_caldas.style.display = "none"
+        copo_cobertura.style.display = "none"
         copo_massa.style.display = "none"
         copo_recheio.style.display = "none"
-        copo_cobertura.style.display = "none"
-        copo_caldas.style.display = "none"
+        copo_valor.style.display = "none"
+
     }
+
+
+
+
+    console.log(compras.value);
     console.log(total_compras);
 }
 
