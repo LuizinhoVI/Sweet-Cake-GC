@@ -44,8 +44,8 @@
             }
             /* botão de enviar os dados dos clientes */
             #enviar {
-                margin-left: 50%;
-                transform: translateX(-50%);
+                left: 50%;
+                transform: translateX(-0%);
             }
             /* centro do meus posts */
             #menu_de_comidas {

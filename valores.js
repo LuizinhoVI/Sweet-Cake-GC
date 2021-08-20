@@ -241,14 +241,6 @@ function escolher_prato() {
             compras.value = "R$ 13,00";
             total_compras = 13;
         }
-
-
-
-
-
-
-
-
     } else {
         copo_caldas.style.display = "none"
         copo_cobertura.style.display = "none"
@@ -258,36 +250,54 @@ function escolher_prato() {
 
     }
 
-
-
-
-
-
     console.log(compras.value);
     console.log(total_compras);
 }
 
 
+function escolha_pagamento() {
 
+    var tipo_pagamento = document.getElementById('tipo_pagamento').value;
+    // var vista = document.getElementById('');
+    // var card = document.getElementById('');
+    var valor_pagamento = document.getElementById('valor_pagamento');
 
+    if (tipo_pagamento == "vista") {
+        alert()
+    } else {
 
-
-
-
-// função para limitar os caracteres da caide entrada dos valores 
-// no object tem que colocar o this
-function numero_max(object) {
-    if (object.value.length > object.maxLength)
-        object.value = object.value.slice(0, object.maxLength)
-}
-// no evt tem que colocar no event
-function numero_max1(evt) {
-    var theEvent = evt || window.event;
-    var key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode(key);
-    var regex = /[0-9]|\./;
-    if (!regex.test(key)) {
-        theEvent.returnValue = false;
-        if (theEvent.preventDefault) theEvent.preventDefault();
+        valor_pagamento.setAttribute('disabled', 'disabled')
+        alert()
     }
-}
+
+    if (tipo_pagamento == "pix") {
+
+
+
+    }
+    if (tipo_pagamento == "card") {
+
+    }
+
+
+
+
+
+
+    // função para limitar os caracteres da caide entrada dos valores 
+    // no object tem que colocar o this
+    function numero_max(object) {
+        if (object.value.length > object.maxLength)
+            object.value = object.value.slice(0, object.maxLength)
+    }
+    // no evt tem que colocar no event
+    function numero_max1(evt) {
+        var theEvent = evt || window.event;
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+            theEvent.returnValue = false;
+            if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }

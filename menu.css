@@ -175,3 +175,27 @@
     H5 {
         color: red;
     }
+    
+    #enviar {
+        border-radius: 10px;
+        border: solid black 1px;
+        box-shadow: 0px 0px 5px 0px;
+        background-color: black;
+    }
+    
+    #enviar:hover {
+        border: solid green 1px;
+        box-shadow: 0px 0px 10px 0px green;
+    }
+    
+    #adicionar {
+        border: solid 1px green;
+    }
+    
+    #dados {
+        border: solid 1px green;
+    }
+    
+    #pagamento {
+        border: 1px solid red;
+    }
