@@ -52,6 +52,7 @@ function escolher_prato() {
     if (tipo == "0") {
         compras.value = "R$ 00,00"
         total_compras = 0;
+
     }
 
 
@@ -256,6 +257,8 @@ function escolher_prato() {
         copo_valor.style.display = "none"
 
     }
+
+
 
 
 

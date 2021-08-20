@@ -67,7 +67,7 @@
         <h4>! Seu pedido sera direcionado e enviado via <span> Whatsapp após o Envio</span> ! </h4>
         <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
         <br>
-        <form action="#" target="_self" autocomplete="off">
+        <form action="www.google.com" target="" method="POST">
             <p>
                 <h4 align="center">SEUS DADOS</h4>
             </p>
@@ -91,14 +91,15 @@
                 <h4 align="center">Pedidos</h4>
             </p>
             <!-- escolhas das comidas e sub-comidas  -->
-            <fieldset>
+            <fieldset color="red">
                 <legend id="pedido_numerador">1 Pedido</legend>
                 <p>
 
 
                     <select class="w3-input w3-padding-16" onchange="escolher_prato()" required name="list" id="tipo_prato">
                         <optgroup label="PRATOS">
-                        <option value="0">Selecionar...</option>
+                      
+                        <option value="0" selected>Selecionar...</option>
                         <option value="Bolo">Bolo </option>
                     <option value="Torta">Torta</option>
                     <option value="Salgado">Salgado</option>
@@ -147,7 +148,7 @@
                     </select></p>
                 <!-- recheio -->
                 <p> <select class="w3-input w3-padding-16" required name="list" id="copo_recheio">               
-                    <optgroup label="Recheio ( Ambos os recheios tem opções zero lactose )">
+                    <optgroup label="RECHEIO ">
                         <option value="">Selecionar...</option>
                         <option value="0">Nenhum</option>
                         <option class="amendoim" value="Copos da Felicidade" > Recheio Amendoim </option>
@@ -257,45 +258,51 @@
 
                 <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="copo_valor">
                     <optgroup label="PREÇO">
-                    <option value="1">Inteiro R$ 13,00</option>
+                    <option value="1">Unidade R$ 13,00</option>
                    
                 </optgroup>
                 </select></P>
 
 
 
-                <p>
-                    <button>Adicionar +</button>
-                </p>
+
             </fieldset>
+            <p>
+                <button>Adicionar +</button>
+            </p>
             <p>
                 <h4 align="center">Mode de pagamento</h4>
             </p>
-            <!-- opções de cartão de credito ou pagamento a vista  -->
-            <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento">
+
+            <fieldset>
+
+                <legend>Pagamento</legend>
+
+                <!-- opções de cartão de credito ou pagamento a vista  -->
+                <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento">
                         <option value="null">Selecionar</option>
                         <option value="A vista">A VÍSTA</option>
                         <option value="Cartão">PIX</option>
                     </select>
 
 
-            <p><label for="" id="troco_letra">Dinheiro em espécie</label></p>
-            <p><label for="" id="troco_letra">Total das compras</label></p>
-            <p><label for="" id="troco_letraend">Seu troco</label></p>
+                <p><label for="" id="troco_letra">Dinheiro em espécie</label></p>
+                <p><label for="" id="troco_letra">Total das compras</label></p>
+                <p><label for="" id="troco_letraend">Seu troco</label></p>
 
-            <!-- digita o valor que ira pagar à vista -->
-            <p>
-                <input type="number" oninput="meu_valor()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" placeholder="Digita aqui..." class=" w3-input w3-padding-16">
-            </p>
+                <!-- digita o valor que ira pagar à vista -->
+                <p>
+                    <input type="number" oninput="meu_valor()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" placeholder="Digita aqui..." class=" w3-input w3-padding-16" required>
+                </p>
 
-            <!-- compras -->
-            <p>
-                <input type="text" disabled id="compras" placeholder="R$ 0,00" class="w3-input w3-padding-16">
-            </p>
-            <!-- troco -->
-            <p><input type="text" id="total" disabled value="" placeholder="R$ 0,00" class="w3-input w3-padding-16">
-            </p>
-
+                <!-- compras -->
+                <p>
+                    <input type="text" disabled id="compras" placeholder="R$ 0,00" class="w3-input w3-padding-16">
+                </p>
+                <!-- troco -->
+                <p><input type="text" id="total" disabled value="" placeholder="R$ 0,00" class="w3-input w3-padding-16">
+                </p>
+            </fieldset>
             <p align="center"><input type="checkbox" id="pedido" required><label style="font-size: 20px;" for="pedido"> Confirma o pedido</label></p>
             <hr>
 
