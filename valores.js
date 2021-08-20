@@ -1,5 +1,6 @@
 var total_compras = 0;
-
+var compras = document.getElementById("compras");
+var tipo = document.getElementById("tipo_prato").value;
 
 function meu_valor() {
 
@@ -263,11 +264,12 @@ function escolha_pagamento() {
     var valor_pagamento = document.getElementById('valor_pagamento');
 
     if (tipo_pagamento == "vista") {
-        alert()
+        valor_pagamento.removeAttribute('disabled')
     } else {
-
         valor_pagamento.setAttribute('disabled', 'disabled')
-        alert()
+        valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
+
+
     }
 
     if (tipo_pagamento == "pix") {
@@ -278,26 +280,26 @@ function escolha_pagamento() {
     if (tipo_pagamento == "card") {
 
     }
+    console.log(tipo)
+}
 
 
 
 
-
-
-    // função para limitar os caracteres da caide entrada dos valores 
-    // no object tem que colocar o this
-    function numero_max(object) {
-        if (object.value.length > object.maxLength)
-            object.value = object.value.slice(0, object.maxLength)
+// função para limitar os caracteres da caide entrada dos valores 
+// no object tem que colocar o this
+function numero_max(object) {
+    if (object.value.length > object.maxLength)
+        object.value = object.value.slice(0, object.maxLength)
+}
+// no evt tem que colocar no event
+function numero_max1(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode(key);
+    var regex = /[0-9]|\./;
+    if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
     }
-    // no evt tem que colocar no event
-    function numero_max1(evt) {
-        var theEvent = evt || window.event;
-        var key = theEvent.keyCode || theEvent.which;
-        key = String.fromCharCode(key);
-        var regex = /[0-9]|\./;
-        if (!regex.test(key)) {
-            theEvent.returnValue = false;
-            if (theEvent.preventDefault) theEvent.preventDefault();
-        }
-    }
+}

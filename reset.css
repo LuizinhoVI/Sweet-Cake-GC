@@ -94,6 +94,11 @@ h6 {
 
 #total {
     width: 20%;
+    color: green;
+}
+
+fieldset>p>input {
+    font-size: 18px;
 }
 
 #copo_cobertura,
