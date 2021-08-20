@@ -32,9 +32,11 @@ function escolher_prato() {
 
     //variaveis dos pratos
     var tipo = document.getElementById("tipo_prato").value;
-    var doce = document.getElementById("doce");
+    var doce = document.getElementById("Doce");
+    var doce_valor = document.getElementById("doce_valor");
     var salgado = document.getElementById("salgado");
     var salgado_parte = document.getElementById("salgado_parte");
+    var salgado_com = document.getElementById("salgado_com");
     var bolo = document.getElementById("bolo");
     var bolo_parte = document.getElementById("bolo_parte");
     var bolo_mini = document.getElementById("bolo_mini");
@@ -50,42 +52,77 @@ function escolher_prato() {
 
     if (tipo == "Doce") {
         doce.style.display = "block"
-    } else { doce.style.display = "none" }
+
+
+        if (doce.value == "1") {
+            doce_valor.style.display = "block";
+            total_compras = 3;
+            compras.value = "R$ 3,00";
+        }
+
+    } else {
+
+        doce.style.display = "none"
+        doce_valor.style.display = "none"
+
+    }
+
+
+    //  TIPO DOCE  
     if (tipo == "Salgado") {
         salgado.style.display = "block"
+        bolo.style.display = "none"
+
         if (salgado.value == "1") {
-            salgado_parte.style.display = "block"
-        }
-        if (salgado_parte.value == "1") {
-            total_compras = 27;
-            compras.value = "R$ 27,00";
-
-        }
-        if (salgado_parte.value == "2") {
-            total_compras = 4.50;
-            compras.value = "R$ 4,50";
-
-        }
-        if (salgado_parte.value == 0) {
-            compras.value = "R$ 0,00";
+            salgado_com.style.display = "block";
+            salgado_parte.style.display = "none";
             total_compras = 0;
+            compras.value = "R$ 00,00";
+
+            if (salgado_com.value == "1") {
+                total_compras = 27;
+                compras.value = "R$ 27,00";
+            }
+
+            if (salgado_com.value == "2") {
+                total_compras = 4.50;
+                compras.value = "R$ 4,50";
+            }
+
         }
+
+
+        if (salgado.value == "2") {
+            salgado_parte.style.display = "block";
+            salgado_com.style.display = "none";
+            total_compras = 0;
+            compras.value = "R$ 00,00";
+
+            if (salgado_parte.value == "1") {
+                total_compras = 24;
+                compras.value = "R$ 24,00";
+            }
+            if (salgado_parte.value == "2") {
+                total_compras = 4;
+                compras.value = "R$ 4,00";
+
+            }
+        }
+
     } else {
         salgado.style.display = "none"
-        salgado.value = 0;
         salgado_parte.style.display = "none"
-        salgado_parte = 0;
-        total_compras = 0;
-        compras.value = "R$ 0,00";
+        salgado_com.style.display = "none"
+        compras.value = "R$ 00,00";
+
     }
 
 
     // vai mostrar as opções  do bolo
     if (tipo == "Bolo") {
         bolo.style.display = "block"
-
-
-
+        salgado.style.display = "none"
+        total_compras = 0;
 
         if (bolo.value == "1") {
             bolo_mini.style.display = "block"
@@ -130,18 +167,12 @@ function escolher_prato() {
         bolo.style.display = "none"
         bolo_parte.style.display = "none"
         bolo_mini.style.display = "none"
-        bolo.value = 0;
-        bolo_mini.value = 0;
-        bolo_parte.value = 0;
-        compras.value = "R$ 0,00";
-        total_compras = 0;
-
 
     }
 
 
 
-    if (tipo == "Gourmet") {
+    if (tipo == "copo") {
         gourmet.style.display = "block"
     } else { gourmet.style.display = "none" }
     if (tipo == "copo") {

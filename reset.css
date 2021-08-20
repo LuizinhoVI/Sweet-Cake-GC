@@ -55,9 +55,11 @@ h6 {
 
 /* dados de comidas do site input --------------------------------------------------- */
 
-#doce,
+#Doce,
+#doce_valor,
 #salgado,
 #salgado_parte,
+#salgado_com,
 #bolo,
 #bolo_mini,
 #bolo_parte,
