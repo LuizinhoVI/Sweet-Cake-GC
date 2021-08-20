@@ -90,17 +90,15 @@ function escolher_prato() {
         if (bolo.value == "1") {
             bolo_mini.style.display = "block"
             bolo_parte.style.display = "none"
-            total_compras = 0;
             compras.value = "R$ 00,00";
-        }
-        if (bolo_mini.value == "1") {
-            total_compras = 15;
-            compras.value = "R$ 15,00";
-            alert("teste")
+            total_compras = 0;
 
-        } else {
-            bolo_parte.style.display = "none"
-            total_compras =
+            if (bolo_mini.value == "1") {
+                total_compras = 15;
+                compras.value = "R$ 15,00";
+
+
+            }
         }
 
         if (bolo.value == "2") {
@@ -109,19 +107,22 @@ function escolher_prato() {
             total_compras = 0;
             compras.value = "R$ 00,00";
 
+
+
+            if (bolo_parte.value == "1") {
+                total_compras = 70;
+                compras.value = "R$ 70,00";
+            }
+
+            if (bolo_parte.value == "2") {
+                total_compras = 7;
+                compras.value = "R$ 7,00";
+            }
+
         }
 
 
-        if (bolo_parte.value == "1") {
-            total_compras = 70;
-            compras.value = "R$ 70,00";
-        }
 
-        if (bolo_parte.value == "2") {
-            total_compras = 7;
-            compras.value = "R$ 7,00";
-
-        }
 
 
 
