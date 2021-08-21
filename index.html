@@ -79,7 +79,7 @@
                 <h1 class="w3-center" id="frango">Quiche de frango</h1><br>
 
                 <p class="w3-large" align="center">Quiche de frango COM Lactose: O Quiche de frango é uma base amanteigada coberta por frango cremoso, ervas especiais, milho, queijo, azeitonas e batata palha.</p>
-                <div class=" m6 " id="comida_imgoff">
+                <div class=" m6" id="comida_imgoff">
                     <img src="src/img/lasanha.jpeg" class="w3-round w3-image w3-opacity- frango_slid1" alt="Table Setting" width="600" height="750">
                     <img src="src/img/lasanha1.jpeg" class="w3-round w3-image w3-opacity- frango_slid1" alt="Table Setting" width="600" height="750">
 
@@ -158,7 +158,7 @@
 
         <!-- 4 comida -->
         <div class="w3-row w3-padding-64" align="center">
-            <div class="w3-col m6 w3-padding-large w3-small " id="comida_img">
+            <div class="w3-col m6 w3-padding-large w3-small" id="comida_img">
                 <img src="src/img/bolo.jpeg" class="w3-round w3-image w3-opacity- slid_bolo_chocolate" alt="Table Setting" width="600" height="750">
                 <img src="src/img/bolo1.jpeg" class="w3-round w3-image w3-opacity- slid_bolo_chocolate" alt="Table Setting" width="600" height="750">
             </div>
@@ -389,6 +389,7 @@
                         <select class="w3-input w3-padding-16" onchange="escolher_prato()" required name="list" id="tipo_prato">
                         <optgroup label="PRATOS">
                       
+                        <option value="" disabled  ></option>
                         <option value="0" selected>Selecionar...</option>
                         <option value="Bolo">Bolo </option>
                     <option value="Torta">Torta</option>
@@ -438,7 +439,7 @@
                     </select></p>
                     <!-- recheio -->
                     <p> <select class="w3-input w3-padding-16" required name="list" id="copo_recheio">               
-                    <optgroup label="RECHEIO ">
+                    <optgroup label="RECHEIO">
                         <option value="">Selecionar...</option>
                         <option value="0">Nenhum</option>
                         <option class="amendoim" value="Copos da Felicidade" > Recheio Amendoim </option>
@@ -569,7 +570,7 @@
                     <legend>Pagamento</legend>
 
                     <!-- opções de cartão de credito ou pagamento a vista  -->
-                    <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento" id="tipo_pagamento" oninput="escolha_pagamento()">
+                    <select class="w3-input w3-padding-16" alt="escolha o modo de pagamento" id="tipo_pagamento" required oninput="escolha_pagamento()">
                         <option value="0" selected>Selecionar</option>
                         <option value="vista">À VISTA</option>
                         <option value="pix">PIX</option>
@@ -577,14 +578,17 @@
                     </select>
 
 
-                    <p id="troco_letra"> Á VISTA </p>
-                    <p id="troco_letramid"> Compras</p>
-                    <p id="troco_letraend">seu troco</p>
+
+                    <p id="troco_letra"> Á VISTA <img class="img_pagamento" src="src/img/pagamento/carteira.png" alt=""></p>
+                    <p id="troco_letramid"> CARRINHO
+                        <img class="img_pagamento" src="src/img/pagamento/cexto.png" alt=""></p>
+
+                    <p id="troco_letraend">TROCO <img class="img_pagamento" src="src/img/pagamento/pagamento.png" alt=""></p>
 
 
                     <!-- digita o valor que ira pagar à vista -->
                     <p>
-                        <input type="number" oninput="meu_valor()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" placeholder="Digita aqui..." class=" w3-input w3-padding-16" required>
+                        <input type="number" oninput="meu_valor()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" placeholder="Digita aqui..." value="" class=" w3-input w3-padding-16" required>
                     </p>
 
                     <!-- compras -->

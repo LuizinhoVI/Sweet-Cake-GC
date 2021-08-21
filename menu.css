@@ -199,3 +199,9 @@
     #pagamento {
         border: 1px solid red;
     }
+    
+    .img_pagamento {
+        position: relative;
+        width: 30px;
+        margin-left: 10px;
+    }

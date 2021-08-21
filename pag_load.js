@@ -1,9 +1,14 @@
-function clear_pag() {
+var escolha_pedido = document.getElementById('tipo_prato');
 
-    if ()
+function verifica_pedido() {
+
+    if (escolha_pedido == '0') {
 
 
-        document.location.reload();
+    } else {
+
+
+    }
 
 
 

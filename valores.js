@@ -1,6 +1,7 @@
 var total_compras = 0;
 var compras = document.getElementById("compras");
 var tipo = document.getElementById("tipo_prato").value;
+var dinheiro = document.getElementById("valor_pagamento");
 
 function meu_valor() {
 
