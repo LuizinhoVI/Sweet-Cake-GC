@@ -6,8 +6,8 @@ function meu_valor() {
 
     var valor_total = 0;
 
-    var dinheiro = document.getElementById("valor_pagamento");
     var total = document.getElementById("total");
+    var dinheiro = document.getElementById("valor_pagamento");
 
 
     if (dinheiro.value > total_compras && dinheiro.value <= 900) {
@@ -264,10 +264,11 @@ function escolha_pagamento() {
     var valor_pagamento = document.getElementById('valor_pagamento');
 
     if (tipo_pagamento == "vista") {
-        valor_pagamento.removeAttribute('disabled')
+        valor_pagamento.removeAttribute('disabled');
     } else {
-        valor_pagamento.setAttribute('disabled', 'disabled')
+        valor_pagamento.value = 0;
         valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
+        valor_pagamento.setAttribute('disabled', 'disabled')
 
 
     }
@@ -280,7 +281,7 @@ function escolha_pagamento() {
     if (tipo_pagamento == "card") {
 
     }
-    console.log(tipo)
+
 }
 
 

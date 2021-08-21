@@ -87,13 +87,23 @@ h6 {
 
 #compras,
 #valor_pagamento,
-#troco_letra {
+#troco_letra,
+#troco_letraend,
+#troco_letramid {
+    text-align: center;
     float: left;
     width: 40%;
 }
 
-#total {
-    width: 20%;
+#compras,
+#troco_letramid {
+    width: 30%;
+}
+
+#total,
+#troco_letraend {
+    text-align: center;
+    width: 30%;
     color: green;
 }
 
@@ -114,11 +124,11 @@ fieldset>p>input {
 /* cores dos ingredientes de  */
 
 .castanho {
-    color: #d2b48c;
+    color: #000000;
 }
 
 .amendoim {
-    color: #cd853f;
+    color: #000000;
 }
 
 .teste {
