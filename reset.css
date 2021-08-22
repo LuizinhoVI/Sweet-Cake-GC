@@ -87,23 +87,30 @@ h6 {
 
 #compras,
 #valor_pagamento,
+.carrinho,
 #troco_letra,
+#troco_letra1,
 #troco_letraend,
-#troco_letramid {
+#troco_letraend1,
+#troco_letramid,
+#troco_letramid1 {
     text-align: center;
     float: left;
     width: 40%;
 }
 
 #compras,
-#troco_letramid {
+#troco_letramid,
+#troco_letramid1 {
     width: 30%;
 }
 
 #total,
-#troco_letraend {
+#troco_letraend,
+#troco_letraend1 {
     text-align: center;
     width: 30%;
+    text-align: green;
 }
 
 fieldset>p>input {

@@ -2,6 +2,8 @@ var total_compras = 0;
 var compras = document.getElementById("compras");
 var tipo = document.getElementById("tipo_prato").value;
 var dinheiro = document.getElementById("valor_pagamento");
+var total = document.getElementById('total');
+
 
 function meu_valor() {
 
@@ -54,7 +56,7 @@ function escolher_prato() {
     if (tipo == "0") {
         compras.value = "R$ 00,00"
         total_compras = 0;
-
+        console.log(tipo)
     }
 
 
@@ -264,10 +266,12 @@ function escolha_pagamento() {
     // var card = document.getElementById('');
     var valor_pagamento = document.getElementById('valor_pagamento');
 
+
     if (tipo_pagamento == "vista") {
         valor_pagamento.removeAttribute('disabled');
     } else {
-        valor_pagamento.value = 0;
+        //valor_pagamento.value = 0;
+
         valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
         valor_pagamento.setAttribute('disabled', 'disabled')
 
@@ -276,11 +280,11 @@ function escolha_pagamento() {
 
     if (tipo_pagamento == "pix") {
 
-
+        total.value = "R$ 00,00";
 
     }
     if (tipo_pagamento == "card") {
-
+        alert()
     }
 
 }

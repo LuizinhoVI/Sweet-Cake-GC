@@ -202,6 +202,12 @@
     
     .img_pagamento {
         position: relative;
-        width: 30px;
-        margin-left: 10px;
+        width: 50px;
+    }
+    
+    #troco_letra1,
+    #troco_letramid1,
+    #troco_letraend1 {
+        position: relative;
+        top: -20px;
     }
