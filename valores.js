@@ -272,7 +272,7 @@ function escolha_pagamento() {
 
         valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
         valor_pagamento.setAttribute('disabled', 'disabled')
-        total.value = "R$ 00,00";
+
         console.log(total.value)
 
     }
