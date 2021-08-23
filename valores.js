@@ -1,4 +1,5 @@
 var total_compras = 0;
+
 var compras = document.getElementById("compras");
 var prato_mercado = document.getElementById("tipo_prato");
 var dinheiro = document.getElementById("valor_pagamento");
@@ -260,30 +261,35 @@ function escolher_prato() {
 function escolha_pagamento() {
 
     var tipo_pagamento = document.getElementById('tipo_pagamento').value;
-    // var vista = document.getElementById('');
-    // var card = document.getElementById('');
+
+    var total = document.getElementById('total');
     var valor_pagamento = document.getElementById('valor_pagamento');
 
 
     if (tipo_pagamento == "vista") {
         valor_pagamento.removeAttribute('disabled');
     } else {
-        // valor_pagamento.value = 0;
-
+        total.value = null;
+        valor_pagamento.value = null;
+        total.setAttribute('placeholder', 'R$ 0,00')
         valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
         valor_pagamento.setAttribute('disabled', 'disabled')
 
-        console.log(total.value)
+
 
     }
 
     if (tipo_pagamento == "pix") {
 
-        total.value = "teste"
+
+
 
     }
     if (tipo_pagamento == "card") {
-        alert()
+
+        dinheiro = 0;
+
+
     }
 
 }

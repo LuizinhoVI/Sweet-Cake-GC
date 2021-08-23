@@ -96,20 +96,20 @@ h6 {
 #troco_letramid1 {
     text-align: center;
     float: left;
-    width: 40%;
+    width: 33%;
 }
 
 #compras,
 #troco_letramid,
 #troco_letramid1 {
-    width: 30%;
+    width: 33%;
 }
 
 #total,
 #troco_letraend,
 #troco_letraend1 {
     text-align: center;
-    width: 30%;
+    width: 33%;
     text-align: green;
 }
 
