@@ -14,7 +14,7 @@ function meu_valor() {
     var dinheiro = document.getElementById("valor_pagamento");
 
 
-    if (dinheiro.value > total_compras && dinheiro.value <= 900) {
+    if (dinheiro.value > total_compras && dinheiro.value <= 100) {
         if (total_compras != 0) {
             valor_total = (dinheiro.value - total_compras);
             // colocarar dentro da caixa de texto o valor total 
@@ -22,7 +22,15 @@ function meu_valor() {
         } else {
             total.value = "R$ 0,00";
         }
-    } else { total.value = "R$ 0,00" }
+    } else {
+
+        if (dinheiro.value > 100) {
+            alert("Digita o valor do dinheiro em espécie  Max: 100,00$ Min: 1,00$");
+            dinheiro.value = 100;
+        }
+        // dinheiro.value = 0;
+        console.log(dinheiro.value)
+    }
 
 }
 

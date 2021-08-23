@@ -345,9 +345,9 @@
             <hr>
             <br>
             <h1>Endereço</h1><br>
-            <p class="letra"> Sistema delivery Somente capela-se 🛵
+            <h3 class="letra"> Sistema delivery Somente capela-se 🛵
 
-            </p>
+            </h3>
             <p class="w3-text-blue-grey w3-large"><b>Capela - SE</b></p>
             <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.07649940590798!2d-37.053040974401966!3d-10.510236464681164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x705694dce44cf9b%3A0xb0f9492781a1cddb!2sCapela!5e1!3m2!1spt-BR!2sbr!4v1628089801664!5m2!1spt-BR!2sbr"
                     width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
@@ -386,7 +386,7 @@
                     <p>
 
 
-                        <select class="w3-input w3-padding-16" onchange="escolher_prato()" required="required" name="list" id="tipo_prato"> 
+                        <select class="w3-input w3-padding-16" onchange="escolher_prato()" onclick="meu_valor()" oninput="escolha_pagamento()" required="required" name="list" id="tipo_prato"> 
                             
                             <option value="" disabled selected  >PRATOS</option>
                             <optgroup>
@@ -456,21 +456,21 @@
                     </optgroup>
                     </select></p>
                         <!--  torta-->
-                        <p> <select class="w3-input w3-padding-16" required name="list" id="Torta" oninput="escolher_prato()">
+                        <p> <select class="w3-input w3-padding-16" required name="list" id="Torta" oninput="escolher_prato()" onclick="meu_valor()">
                         
                     <option value="limao">Torta de Limão Gelada</option>
                         <option value="negresco">Torta de Negresco Gelada</option>
 
                 </select></p>
                         <!-- torta de limão -->
-                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="torta_valor">
+                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" onclick="meu_valor()" name="" id="torta_valor">
                     <optgroup label="PREÇO">
                     <option value="1">Inteiro R$ 24,00</option>
                     <option value="2">Fatia R$ 4,00</option>
                 </optgroup>
                 </select></P>
                         <!-- torta de negresco -->
-                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="torta_valor1">
+                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" onclick="meu_valor()" name="" id="torta_valor1">
                     <optgroup label="PREÇO">
                     <option value="1">Inteiro R$ 35,00</option>
                     <option value="2">Fatia R$ 7,00</option>
@@ -481,7 +481,7 @@
 
 
                         <!-- salgado -->
-                        <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" oninput="escolher_prato()" required name="list" id="salgado">
+                        <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" oninput="escolher_prato()" onclick="meu_valor()" required name="list" id="salgado">
                         <optgroup label="SALGADO">
 
                         <option value="1">Quiche de frango COM Lactose</option>
@@ -491,7 +491,7 @@
                 </select>
                         </p>
                         <!--escolhas do quiche de frango  com lactose -->
-                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="salgado_com">
+                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" onclick="meu_valor()" name="" id="salgado_com">
                     <optgroup label="PREÇO">
                     <option value="1">Inteiro R$ 27,00</option>
                     <option value="2">Fatia R$ 4,50</option>
@@ -507,7 +507,7 @@
 
                         <!-- bolos -->
                         <p>
-                            <select class="w3-input  w3-padding-16" required onchange="escolher_prato()" id="bolo">
+                            <select class="w3-input  w3-padding-16" required onchange="escolher_prato()" onclick="meu_valor()" id="bolo">
                                  <optgroup label="Bolos">
                                      <option value="2">Bolo Red velvet</option>
                                      <option value="1">Mini Bolo Vulcão</option>
@@ -517,7 +517,7 @@
                         </p>
 
                         <!-- escolhas do bolo  -->
-                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" name="" id="bolo_parte">
+                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" onclick="meu_valor()" name="" id="bolo_parte">
                     <optgroup label="PREÇOS">
 
                         <option value="1">Inteiro R$ 70,00</option>
