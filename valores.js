@@ -272,20 +272,30 @@ function escolher_prato() {
 function escolha_pagamento() {
 
     var tipo_pagamento = document.getElementById('tipo_pagamento').value;
+    var compras_valor = document.getElementById('compras');
     var total = document.getElementById('total');
     var valor_pagamento = document.getElementById('valor_pagamento');
 
 
     if (tipo_pagamento == "vista") {
         valor_pagamento.removeAttribute('disabled');
-        valor_pagamento.classList.add("caixa_de_seletion");
+        valor_pagamento.classList.add("caixa_de_seletion_red");
+
+        if (valor_pagamento.value > compras_valor.value) {
+            valor_pagamento.classList.remove("caixa_de_seletion_red");
+            valor_pagamento.classList.add("caixa_de_seletion")
+            alert("")
+        }
     } else {
         total.value = null;
+
         valor_pagamento.value = null;
         total.setAttribute('placeholder', 'R$ 0,00')
         valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
+        valor_pagamento.classList.remove("caixa_de_seletion_red");
         valor_pagamento.classList.remove("caixa_de_seletion");
         valor_pagamento.setAttribute('disabled', 'disabled')
+
 
 
 
