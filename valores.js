@@ -26,17 +26,17 @@ function meu_valor() {
 
             if (total.value.length >= 6) {
                 total.value = "R$ " + valor_total;
-                console.log(total.value.length)
+
             } else {
                 total.value = "R$ " + valor_total + ",00";
             }
         } else {
-            total.value = "R$ 0,00";
+            total.value = "R$ 0.00";
         }
     } else {
 
         if (dinheiro.value > 100) {
-            alert("Digita o valor do dinheiro em espécie  Max: 100,00$ Min: 1,00$");
+            alert("Digita o valor do dinheiro em espécie  Max: 100.00$ Min: 1,00$");
             dinheiro.value = 100;
         }
         // dinheiro.value = 0;
@@ -72,7 +72,7 @@ function escolher_prato() {
 
 
     if (tipo == "0") {
-        compras.value = "R$ 00,00"
+        compras.value = "R$ 0.00"
         total_compras = 0;
 
     }
@@ -143,7 +143,7 @@ function escolher_prato() {
 
         doce.style.display = "none"
         doce_valor.style.display = "none"
-            // compras.value = "R$ 00,00";
+            // compras.value = "R$ 0.00";
             // total_compras = 0;
     }
 
@@ -157,7 +157,7 @@ function escolher_prato() {
             salgado_com.style.display = "block";
             salgado_parte.style.display = "none";
             total_compras = 0;
-            compras.value = "R$ 00,00";
+            compras.value = "R$ 0.00";
 
             if (salgado_com.value == "1") {
                 total_compras = 27;
@@ -193,7 +193,7 @@ function escolher_prato() {
         salgado.style.display = "none"
         salgado_parte.style.display = "none"
         salgado_com.style.display = "none"
-            // compras.value = "R$ 00,00";
+            // compras.value = "R$ 0.00";
 
     }
 
@@ -207,7 +207,7 @@ function escolher_prato() {
         if (bolo.value == "1") {
             bolo_mini.style.display = "block"
             bolo_parte.style.display = "none"
-            compras.value = "R$ 00,00";
+            compras.value = "R$ 0.00";
             total_compras = 0;
 
             if (bolo_mini.value == "1") {
@@ -222,13 +222,13 @@ function escolher_prato() {
             bolo_mini.style.display = "none"
             bolo_parte.style.display = "block"
             total_compras = 0;
-            compras.value = "R$ 00,00";
+            compras.value = "R$ 0.00";
 
 
 
             if (bolo_parte.value == "1") {
                 total_compras = 70;
-                compras.value = "R$ 70,00";
+                compras.value = "R$ 70.00";
             }
 
             if (bolo_parte.value == "2") {
@@ -295,7 +295,7 @@ function escolha_pagamento() {
         } else {
             valor_pagamento.classList.add("caixa_de_seletion_red");
             valor_pagamento.classList.remove("caixa_de_seletion")
-            total.value = "R$ 00,00"
+            total.value = "R$ 0.00"
 
 
 
@@ -305,8 +305,8 @@ function escolha_pagamento() {
         total.value = null;
 
         valor_pagamento.value = null;
-        total.setAttribute('placeholder', 'R$ 0,00')
-        valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
+        total.setAttribute('placeholder', 'R$ 0.00')
+        valor_pagamento.setAttribute('placeholder', 'R$ 0.00')
         valor_pagamento.classList.remove("caixa_de_seletion_red");
         valor_pagamento.classList.remove("caixa_de_seletion");
         valor_pagamento.setAttribute('disabled', 'disabled')
@@ -335,7 +335,7 @@ function enviarMensagem() {
 
     var celular = "5579999722046";
 
-    var texto = "A pia pinga, o pinto pia...\n Quanto mais a pia pinga, mais o pinto pia.\n\n Acesse https: //ratimbum.com/?token=333 para saber mais.";
+    var texto = "PEDIDO: \n  Quanto mais a pia pinga, mais o pinto pia.\n\n Acesse https: //ratimbum.com/?token=333 para saber mais.";
 
     convert = window.encodeURIComponent(texto);
 
