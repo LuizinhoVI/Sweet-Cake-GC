@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="menu.css">
 <link rel="stylesheet" href="responsivo.css">
 <script src="PRATO.js"></script>
-<script src="api_whatsapp.js"></script>
+<!-- <script src="api_whatsapp.js"></script> -->
 <script src="slide.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -345,7 +345,7 @@
             <hr>
             <br>
             <h1>Endereço</h1><br>
-            <h3 class="letra"> Sistema delivery Somente capela-se 🛵
+            <h3 class="letra"> Sistema delivery FREE Somente para Capela-Se 🛵
 
             </h3>
             <p class="w3-text-blue-grey w3-large"><b>Capela - SE</b></p>
@@ -602,7 +602,7 @@
 
                     <!-- digita o valor que ira pagar à vista -->
                     <p>
-                        <input type="number" oninput="meu_valor()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" value="" class=" w3-input w3-padding-16" required>
+                        <input type="number" oninput="meu_valor(),escolha_pagamento()" oninput="numero_max(event)" onkeypress="numero_max(this)" maxlength="2" min="1" max="100" id="valor_pagamento" value="" class=" w3-input w3-padding-16" required>
                     </p>
 
                     <!-- compras -->
@@ -620,12 +620,15 @@
 
 
                 <!-- botão de enviar  -->
-                <p align="center"><input class="w3-button w3-light-grey w3-section" id="enviar" type="submit" value="Enviar Pedido"> </p>
+                <p align="center"><input class="w3-button w3-light-grey w3-section" id="enviar" type="submit" onclick="enviarMensagem()" value="Enviar Pedido"> </p>
             </form>
         </div>
         <!-- End page content -->
     </div>
 
+    <div id="tela_ok">
+        teste
+    </div>
     <!-- Footer -->
     <footer class="final w3-light-grey w3-padding-32">
         <h2>“Carinho e doçura em tudo que faz”</h2><br>

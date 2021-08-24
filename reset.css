@@ -133,6 +133,20 @@ fieldset>p>input {
     width: 50%;
 }
 
+#tela_ok {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background-color: rgb(34, 22, 209);
+}
+
 
 /* ----------------------------------------------------------------------- fim */
 

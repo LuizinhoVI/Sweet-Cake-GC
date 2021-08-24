@@ -1,16 +1,19 @@
 var total_compras = 0;
+var valor_total = 0;
+
 
 var compras = document.getElementById("compras");
 var prato_mercado = document.getElementById("tipo_prato");
 var dinheiro = document.getElementById("valor_pagamento");
-var total = document.getElementById('total');
+// var total = document.getElementById('total');
 
 
 
 // função para fazer o calculo automatico 
+
 function meu_valor() {
 
-    var valor_total = 0;
+
 
     var total = document.getElementById("total");
     var dinheiro = document.getElementById("valor_pagamento");
@@ -20,7 +23,9 @@ function meu_valor() {
         if (total_compras != 0) {
             valor_total = (dinheiro.value - total_compras);
             // colocarar dentro da caixa de texto o valor total 
+            if (total_compras == total_compras.length) {
 
+            }
             total.value = "R$ " + valor_total + ",00";
         } else {
             total.value = "R$ 0,00";
@@ -32,7 +37,7 @@ function meu_valor() {
             dinheiro.value = 100;
         }
         // dinheiro.value = 0;
-        console.log(dinheiro.value)
+
     }
 
 }
@@ -66,7 +71,7 @@ function escolher_prato() {
     if (tipo == "0") {
         compras.value = "R$ 00,00"
         total_compras = 0;
-        console.log(tipo)
+
     }
 
 
@@ -264,8 +269,7 @@ function escolher_prato() {
 
     }
 
-    console.log(compras.value);
-    console.log(total_compras);
+
 }
 
 // função para fazer o resultado do calculo da loja 
@@ -279,12 +283,20 @@ function escolha_pagamento() {
 
     if (tipo_pagamento == "vista") {
         valor_pagamento.removeAttribute('disabled');
-        valor_pagamento.classList.add("caixa_de_seletion_red");
 
-        if (valor_pagamento.value > compras_valor.value) {
+        if (valor_pagamento.value >= total_compras) {
             valor_pagamento.classList.remove("caixa_de_seletion_red");
             valor_pagamento.classList.add("caixa_de_seletion")
-            alert("")
+
+
+        } else {
+            valor_pagamento.classList.add("caixa_de_seletion_red");
+            valor_pagamento.classList.remove("caixa_de_seletion")
+            total.value = "R$ 00,00"
+
+
+
+
         }
     } else {
         total.value = null;
@@ -309,17 +321,27 @@ function escolha_pagamento() {
     }
     if (tipo_pagamento == "card") {
 
-        dinheiro = 0;
+
 
 
     }
 
 }
 
+function enviarMensagem() {
+    alert("teste");
+    var celular = "5579999722046";
+
+    var texto = "A pia pinga, o pinto pia...\n Quanto mais a pia pinga, mais o pinto pia.\n\n Acesse https: //ratimbum.com/?token=333 para saber mais.";
+
+    convert = window.encodeURIComponent(texto);
+
+    window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + convert, "_blank");
+    //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+}
 
 
-
-// função para limitar os caracteres da caide entrada dos valores 
+// função para limitar os caracteres da Saida de entrada dos valores 
 // no object tem que colocar o this
 function numero_max(object) {
     if (object.value.length > object.maxLength)
