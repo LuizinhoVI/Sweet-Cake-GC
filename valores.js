@@ -6,6 +6,8 @@ var dinheiro = document.getElementById("valor_pagamento");
 var total = document.getElementById('total');
 
 
+
+// função para fazer o calculo automatico 
 function meu_valor() {
 
     var valor_total = 0;
@@ -18,6 +20,7 @@ function meu_valor() {
         if (total_compras != 0) {
             valor_total = (dinheiro.value - total_compras);
             // colocarar dentro da caixa de texto o valor total 
+
             total.value = "R$ " + valor_total + ",00";
         } else {
             total.value = "R$ 0,00";
@@ -34,7 +37,7 @@ function meu_valor() {
 
 }
 
-
+// função para fazer as escolhas dos pratos
 function escolher_prato() {
 
     //variaveis dos pratos
@@ -265,22 +268,23 @@ function escolher_prato() {
     console.log(total_compras);
 }
 
-
+// função para fazer o resultado do calculo da loja 
 function escolha_pagamento() {
 
     var tipo_pagamento = document.getElementById('tipo_pagamento').value;
-
     var total = document.getElementById('total');
     var valor_pagamento = document.getElementById('valor_pagamento');
 
 
     if (tipo_pagamento == "vista") {
         valor_pagamento.removeAttribute('disabled');
+        valor_pagamento.classList.add("caixa_de_seletion");
     } else {
         total.value = null;
         valor_pagamento.value = null;
         total.setAttribute('placeholder', 'R$ 0,00')
         valor_pagamento.setAttribute('placeholder', 'R$ 0,00')
+        valor_pagamento.classList.remove("caixa_de_seletion");
         valor_pagamento.setAttribute('disabled', 'disabled')
 
 
