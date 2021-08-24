@@ -1,6 +1,6 @@
-var total_compras = 0;
-var valor_total = 0;
-
+var total_compras = 0; // valor das compras
+var valor_total = 0; // valor do troco 
+var palavras_aleatorias = ['a', 'b', 'c']
 
 var compras = document.getElementById("compras");
 var prato_mercado = document.getElementById("tipo_prato");
@@ -23,10 +23,13 @@ function meu_valor() {
         if (total_compras != 0) {
             valor_total = (dinheiro.value - total_compras);
             // colocarar dentro da caixa de texto o valor total 
-            if (total_compras == total_compras.length) {
 
+            if (total.value.length >= 6) {
+                total.value = "R$ " + valor_total;
+                console.log(total.value.length)
+            } else {
+                total.value = "R$ " + valor_total + ",00";
             }
-            total.value = "R$ " + valor_total + ",00";
         } else {
             total.value = "R$ 0,00";
         }
@@ -329,7 +332,7 @@ function escolha_pagamento() {
 }
 
 function enviarMensagem() {
-    alert("teste");
+
     var celular = "5579999722046";
 
     var texto = "A pia pinga, o pinto pia...\n Quanto mais a pia pinga, mais o pinto pia.\n\n Acesse https: //ratimbum.com/?token=333 para saber mais.";
@@ -340,6 +343,16 @@ function enviarMensagem() {
     //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
 }
 
+function gera_id() {
+    var size = 10 //tamanho do ID e armazena na variável
+    var randomized = Math.ceil(Math.random() * Math.pow(10, size)); //Cria um número aleatório do tamanho definido em size.
+    var digito = Math.ceil(Math.log(randomized)); //Cria o dígito verificador inicial
+    while (digito > 10) { //Pega o digito inicial e vai refinando até ele ficar menor que dez
+        digito = Math.ceil(Math.log(digito));
+    }
+    var id = randomized + '-' + digito; //Cria a ID
+    alert(id);
+}
 
 // função para limitar os caracteres da Saida de entrada dos valores 
 // no object tem que colocar o this
