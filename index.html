@@ -357,9 +357,9 @@
             <h4>! Seu pedido sera direcionado e enviado via <span> Whatsapp após o Envio</span> ! </h4>
             <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
             <br>
-            <form action="#" target="" method="">
+            <form action="#" onclick="enviarMensagem(),gera_id()" target="" method="">
                 <p>
-                    <h4 align="center">Cadastro</h4>
+                    <h4 align="center">Cliente</h4>
                 </p>
 
                 <fieldset id="dados">
@@ -389,14 +389,13 @@
                         <select class="w3-input w3-padding-16" onchange="escolher_prato()" onclick="meu_valor()" oninput="escolha_pagamento()" required="required" name="list" id="tipo_prato"> 
                             
                             <option value="" disabled selected  >PRATOS</option>
-                            <optgroup>
                             <option value="0" disabled >Selecionar...</option>
                             <option value="Bolo">Bolo </option>
                             <option value="Torta">Torta</option>
                             <option value="Salgado">Salgado</option>
                             <option value="Doce">Doce</option>
                             <option value="copo">copo da felicidade</option>
-                        </optgroup>  
+                
                     </select>
 
 
@@ -620,7 +619,7 @@
 
 
                 <!-- botão de enviar  -->
-                <p align="center"><input class="w3-button w3-light-grey w3-section" id="enviar" type="submit" onclick="enviarMensagem(),gera_id()" value="Enviar Pedido"> </p>
+                <p align="center"><input class="w3-button w3-light-grey w3-section" id="enviar" type="submit" value="Enviar Pedido"> </p>
             </form>
         </div>
         <!-- End page content -->
