@@ -343,6 +343,25 @@ function enviarMensagem() {
     //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
 }
 
+function enviarMensagem() {
+
+    var celular = "5579999722046";
+
+    var texto = "Nome: \n telefone:  \n Endereço \n nº  \n referência \n ";
+
+    convert = window.encodeURIComponent(texto);
+
+    window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + convert, "_blank");
+    //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+}
+
+
+
+
+
+
+
+
 function gera_id() {
     var size = 10 //tamanho do ID e armazena na variável
     var randomized = Math.ceil(Math.random() * Math.pow(10, size)); //Cria um número aleatório do tamanho definido em size.
@@ -353,6 +372,11 @@ function gera_id() {
     var id = randomized + '-' + digito; //Cria a ID
     alert(id);
 }
+
+
+
+
+
 
 // função para limitar os caracteres da Saida de entrada dos valores 
 // no object tem que colocar o this
