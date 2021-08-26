@@ -1,8 +1,8 @@
 function enviarMensagem() {
-    alert("teste");
+
     var celular = "5579999722046";
 
-    var texto = "texto de teste \n teste  pulando linha ";
+    var texto = "Nome: \n telefone:  \n Endereço \n nº  \n referência \n ";
 
     convert = window.encodeURIComponent(texto);
 
