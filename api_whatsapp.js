@@ -2,10 +2,17 @@ function enviarMensagem() {
     alert("teste");
     var celular = "5579999722046";
 
-    var texto = "A pia pinga, o pinto pia...\n Quanto mais a pia pinga, mais o pinto pia.\n\n Acesse https: //ratimbum.com/?token=333 para saber mais.";
+    var texto = "texto de teste \n teste  pulando linha ";
 
     convert = window.encodeURIComponent(texto);
 
     window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + convert, "_blank");
     //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
 }
+enviarMensagem();
+
+function tabClose() {
+    var tab = window.open(window.location, "_self");
+    tab.close();
+}
+tabClose();
