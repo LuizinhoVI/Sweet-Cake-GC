@@ -355,7 +355,8 @@
             <h4>! Seu pedido sera direcionado e enviado via <span> Whatsapp após o Envio</span> ! </h4>
             <h5>(AVISO) No momento estamos atualizando o site para novas funções...</h5>
             <br>
-            <form action="whatsapp.html" method="" target="_blank">
+            <form>
+                <!-- method="dialog" -->
                 <p>
                     <h4 align="center">Cliente</h4>
                 </p>
@@ -363,17 +364,18 @@
                 <fieldset id="dados">
                     <legend></legend>
 
-                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name" alt="digita seu nome"></p>
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name" id="name" alt="digita seu nome"></p>
+
                     <!-- <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p> -->
                     <!-- numero de telefone -->
-                    <p><input class="w3-input w3-padding-16" type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="Celular" maxlength="11" minlength="9" required name="People"></p>
+                    <p><input class="w3-input w3-padding-16" type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="Celular" maxlength="11" minlength="9" id="celular" required name="People"></p>
                     <!-- endereço -->
-                    <p><input type="text" id="rua" required class="w3-input w3-padding-16" placeholder="Endereço da rua..."></p>
+                    <p><input type="text" id="rua" required class="w3-input w3-padding-16" placeholder="Endereço da rua..." oninput=""></p>
                     <p></p>
                     <!-- numero da casa -->
-                    <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" max="99999" required pattern="([0-9]{9})" name="numero-casa"></p>
+                    <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" max="99999" required pattern="([0-9]{9})" name="numero-casa" oninput=""></p>
                     <!-- referencia -->
-                    <p><input type="text" id="referencia" required placeholder="Referência" class="w3-input w3-padding-16"></p>
+                    <p><input type="text" id="referencia" required placeholder="Referência" class="w3-input w3-padding-16" oninput=""></p>
                 </fieldset>
                 <p> <br>
                     <h4 align="center">Pedidos</h4>
@@ -395,8 +397,6 @@
                             <option value="copo">copo da felicidade</option>
                 
                     </select>
-
-
 
                         <!-- massa -->
                         <p><select class="w3-input w3-padding-16" required name="list" id="copo_massa">
@@ -473,9 +473,6 @@
                     <option value="2">Fatia R$ 7,00</option>
                 </optgroup>
                 </select></P>
-
-
-
 
                         <!-- salgado -->
                         <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" oninput="escolher_prato()" onclick="meu_valor()" required name="list" id="salgado">
@@ -617,7 +614,8 @@
 
 
                 <!-- botão de enviar  -->
-                <p align="center"><input class="w3-button w3-light-grey w3-section" id="enviar" type="submit" value="Enviar Pedido"> </p>
+                <p align="center">
+                    <input class="w3-button w3-light-grey w3-section" id="enviar" type="submit" onclick="enviarMensagem(),mostrar()" value="Enviar Pedido"> </p>
             </form>
         </div>
         <!-- End page content -->
@@ -641,7 +639,7 @@
     </footer>
     <!-- escript final de animação de slides -->
 
-    <script>
+    <script src="valores.js">
         slid_frango();
         slid_bolo_red();
         slid_torta_limon();

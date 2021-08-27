@@ -1,8 +1,8 @@
 function enviarMensagem() {
 
     var tab = window.open(window.location, "_self");
-
     tab.close();
+
     var celular = "5579999722046";
 
     var texto = "Nome: \n telefone:  \n Endereço \n nº  \n referência \n ";

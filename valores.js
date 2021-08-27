@@ -1,6 +1,6 @@
 var total_compras = 0; // valor das compras
 var valor_total = 0; // valor do troco 
-var palavras_aleatorias = ['a', 'b', 'c']
+
 
 var compras = document.getElementById("compras");
 var prato_mercado = document.getElementById("tipo_prato");
@@ -331,28 +331,62 @@ function escolha_pagamento() {
 
 }
 
-function enviarMensagem() {
+// variaveis dos dados 
+nome = document.getElementById("name")
+celular_cliente = document.getElementById('celular')
+rua = document.getElementById('rua')
+n_rua = document.getElementById('rua_numero')
+referencia = document.getElementById('referencia')
 
-    var celular = "5579999722046";
+//variaveis das comidas
+tipo_prato = document.getElementById('tipo_prato')
 
-    var texto = "PEDIDO: \n  Quanto mais a pia pinga, mais o pinto pia.\n\n Acesse https: //ratimbum.com/?token=333 para saber mais.";
+pagamento = document.getElementById('tipo_pagamento')
+confirmacao = document.getElementById('pedido')
 
-    convert = window.encodeURIComponent(texto);
 
-    window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + convert, "_blank");
-    //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+
+function mostrar() {
+    if (nome.value == 0) {
+        alert("coloca uma ariavel")
+
+    } else {
+
+
+
+        console.log(nome.value)
+        console.log(celular_cliente.value)
+        console.log(rua.value)
+        console.log(n_rua.value)
+        console.log(referencia.value)
+        console.log(tipo_prato.value)
+
+
+    }
+
 }
 
 function enviarMensagem() {
+    //verificação das opções
+    if (nome.value != 0 && celular_cliente.value != 0 && rua.value != 0 && n_rua.value != 0 && referencia.value != 0 && tipo_prato.value != 0 && pagamento.value != 0 && confirmacao.checked != false) {
 
-    var celular = "5579999722046";
 
-    var texto = "Nome: \n telefone:  \n Endereço \n nº  \n referência \n ";
+        alert("você será direcionado para o whatsapp ")
 
-    convert = window.encodeURIComponent(texto);
+        var my_celular = "5579999722046";
 
-    window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + convert, "_blank");
-    //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+        var texto = "Nome: " + nome.value + "\n telefone: " +
+            celular_cliente.value + "  \n Endereço: " + rua.value + "\n nº: " +
+            n_rua.value + "  \n referência:" + referencia.value + "\n tipo-do-prato: " + tipo_prato.innerHTML.value + "\n Tipo do pagamento:";
+
+        convert = window.encodeURIComponent(texto);
+
+        window.open("https://api.whatsapp.com/send?phone=" + my_celular + "&text=" + convert, "_blank");
+        //Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+
+    } else {
+        console.log("sucesso")
+    }
 }
 
 
