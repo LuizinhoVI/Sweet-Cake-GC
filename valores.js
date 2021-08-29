@@ -322,12 +322,7 @@
 
 
      }
-     if (tipo_pagamento == "card") {
 
-
-
-
-     }
 
  }
 
