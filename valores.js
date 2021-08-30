@@ -2,10 +2,9 @@
  valor_total = 0; // valor do troco 
 
 
- var compras = document.getElementById("compras");
- var prato_mercado = document.getElementById("tipo_prato");
- var dinheiro = document.getElementById("valor_pagamento");
- // var total = document.getElementById('total');
+ menu_prato = "";
+ nome_prato = "";
+ valor_prato = "";
 
 
 
@@ -49,7 +48,7 @@
  function escolher_prato() {
 
      //variaveis dos pratos
-     var tipo = document.getElementById("tipo_prato").value;
+     var tipo = document.getElementById("tipo_prato");
      var doce = document.getElementById("Doce");
      var doce_valor = document.getElementById("doce_valor");
      var salgado = document.getElementById("salgado");
@@ -71,7 +70,7 @@
      //  var compras = document.getElementById("troco");
 
 
-     if (tipo == "0") {
+     if (tipo.value == "0") {
          compras.value = "R$ 0.00"
          total_compras = 0;
 
@@ -79,7 +78,7 @@
 
 
      // TIPO TORTA
-     if (tipo == "Torta") {
+     if (tipo.value == "Torta") {
          torta.style.display = "block";
 
 
@@ -128,7 +127,7 @@
 
 
      // TIPO DOCE
-     if (tipo == "Doce") {
+     if (tipo.value == "Doce") {
          doce.style.display = "block"
 
 
@@ -149,7 +148,7 @@
 
 
      //  TIPO  SALGADO
-     if (tipo == "Salgado") {
+     if (tipo.value == "Salgado") {
          salgado.style.display = "block"
          bolo.style.display = "none"
 
@@ -199,7 +198,7 @@
 
 
      // TIPO BOLO 
-     if (tipo == "Bolo") {
+     if (tipo.value == "Bolo") {
          bolo.style.display = "block"
          salgado.style.display = "none"
          total_compras = 0;
@@ -252,7 +251,7 @@
 
 
      // TIPO COPO 
-     if (tipo == "copo") {
+     if (tipo.value == "copo") {
          copo_valor.style.display = "block"
 
          if (copo_valor.value == "1") {
@@ -272,6 +271,15 @@
 
      }
 
+     for (let index = 2; index <= 6; index++) {
+         var pratos = document.getElementById('tipo_prato')[index]
+         if (pratos.selected == true) {
+             menu_prato = pratos.innerHTML; // salvara o innethtml dentro da variavel de string
+
+             break;
+         }
+
+     }
 
  }
 
@@ -337,6 +345,7 @@
  tipo_prato = document.getElementById('tipo_prato')
 
  pagamento = document.getElementById('tipo_pagamento')
+ dinheiro_a_vista = document.getElementById('valor_pagamento')
  confirmacao = document.getElementById('pedido')
 
 
@@ -355,6 +364,8 @@
          console.log(n_rua.value)
          console.log(referencia.value)
          console.log(tipo_prato.value)
+         console.log("valor do troco " + valor_total)
+         console.log("valor do troco " + total_compras)
 
 
      }
@@ -372,7 +383,7 @@
 
          var texto = "testando mensagens Nome: " + nome.value + "\n telefone: " +
              celular_cliente.value + "  \n Endereço: " + rua.value + "\n nº: " +
-             n_rua.value + "  \n referência:" + referencia.value + "\n tipo-do-prato: " + tipo_prato.innerHTML.value + "" + "\n Tipo do pagamento:";
+             n_rua.value + "  \n referência:" + referencia.value + "\n tipo do prato: " + menu_prato + "" + "\n Tipo do pagamento: " + pagamento[1].innerHTML + "\n Meu dinheiro: R$ " + dinheiro_a_vista.value + "\n Compras R$ " + total_compras + "\n Troco: R$ " + valor_total + "\n ";
 
          convert = window.encodeURIComponent(texto);
 
