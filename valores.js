@@ -281,6 +281,7 @@
 
      }
 
+
  }
 
  // função para fazer o resultado do calculo da loja 
@@ -381,9 +382,9 @@
 
          var my_celular = "5579999722046";
 
-         var texto = "testando mensagens Nome: " + nome.value + "\n telefone: " +
+         var texto = "Nome: " + nome.value + "\n telefone: " +
              celular_cliente.value + "  \n Endereço: " + rua.value + "\n nº: " +
-             n_rua.value + "  \n referência:" + referencia.value + "\n tipo do prato: " + menu_prato + "" + "\n Tipo do pagamento: " + pagamento[1].innerHTML + "\n Meu dinheiro: R$ " + dinheiro_a_vista.value + "\n Compras R$ " + total_compras + "\n Troco: R$ " + valor_total + "\n ";
+             n_rua.value + "  \n referência:" + referencia.value + "\n tipo do prato: " + menu_prato + "" + "\n Tipo do pagamento: " + pagamento[1].innerHTML + "\n Meu dinheiro: R$ " + dinheiro_a_vista.value + " - Valor R$ " + total_compras + " = Troco: R$ " + valor_total + "\n ";
 
          convert = window.encodeURIComponent(texto);
 
