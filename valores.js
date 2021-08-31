@@ -4,7 +4,7 @@
 
  menu_prato = "";
  nome_prato = "";
- valor_prato = "";
+ cobertura = "", massa = "", caldas = "", recheio = "";
 
 
 
@@ -70,7 +70,7 @@
      //  var compras = document.getElementById("troco");
 
 
-     if (tipo.value == "0") {
+     if (tipo.value == "") {
          compras.value = "R$ 0.00"
          total_compras = 0;
 
@@ -86,6 +86,9 @@
              torta_valor.style.display = "block";
              torta_valor1.style.display = "none";
 
+             nome_prato = torta[0].innerHTML;
+
+             console.log(nome_prato)
              if (torta_valor.value == "1") {
                  compras.value = "R$ 24,00";
                  total_compras = 24;
@@ -103,6 +106,8 @@
              torta_valor1.style.display = "block";
              torta_valor.style.display = "none";
 
+             nome_prato = torta[1].innerHTML;
+             console.log(nome_prato)
              if (torta_valor1.value == "1") {
                  compras.value = "R$ 35,00";
                  total_compras = 35;
@@ -130,7 +135,7 @@
      if (tipo.value == "Doce") {
          doce.style.display = "block"
 
-
+         nome_prato = doce[0].innerHTML;
 
          if (doce.value == "1") {
              doce_valor.style.display = "block";
@@ -152,11 +157,14 @@
          salgado.style.display = "block"
          bolo.style.display = "none"
 
+
          if (salgado.value == "1") {
              salgado_com.style.display = "block";
              salgado_parte.style.display = "none";
              total_compras = 0;
              compras.value = "R$ 0.00";
+             nome_prato = salgado[0].innerHTML;
+
 
              if (salgado_com.value == "1") {
                  total_compras = 27;
@@ -175,7 +183,7 @@
              salgado_parte.style.display = "block";
              salgado_com.style.display = "none";
              total_compras = 0;
-
+             nome_prato = salgado[1].innerHTML;
 
              if (salgado_parte.value == "1") {
                  total_compras = 24;
@@ -208,6 +216,7 @@
              bolo_parte.style.display = "none"
              compras.value = "R$ 0.00";
              total_compras = 0;
+             nome_prato = bolo[1].innerHTML;
 
              if (bolo_mini.value == "1") {
                  total_compras = 15;
@@ -222,7 +231,7 @@
              bolo_parte.style.display = "block"
              total_compras = 0;
              compras.value = "R$ 0.00";
-
+             nome_prato = bolo[0].innerHTML;
 
 
              if (bolo_parte.value == "1") {
@@ -254,6 +263,7 @@
      if (tipo.value == "copo") {
          copo_valor.style.display = "block"
 
+
          if (copo_valor.value == "1") {
              copo_massa.style.display = "block"
              copo_cobertura.style.display = "block"
@@ -261,6 +271,8 @@
              copo_caldas.style.display = "block"
              compras.value = "R$ 13,00";
              total_compras = 13;
+
+
          }
      } else {
          copo_caldas.style.display = "none"
@@ -275,6 +287,7 @@
          var pratos = document.getElementById('tipo_prato')[index]
          if (pratos.selected == true) {
              menu_prato = pratos.innerHTML; // salvara o innethtml dentro da variavel de string
+
 
              break;
          }
@@ -384,7 +397,8 @@
 
          var texto = "Nome: " + nome.value + "\n telefone: " +
              celular_cliente.value + "  \n Endereço: " + rua.value + "\n nº: " +
-             n_rua.value + "  \n referência:" + referencia.value + "\n tipo do prato: " + menu_prato + "" + "\n Tipo do pagamento: " + pagamento[1].innerHTML + "\n Meu dinheiro: R$ " + dinheiro_a_vista.value + " - Valor R$ " + total_compras + " = Troco: R$ " + valor_total + "\n ";
+             n_rua.value + "  \n referência: " + referencia.value + "\n Prato: " + menu_prato + "\nComida :" + nome_prato + " Valor R$ " + total_compras +
+             "\n Tipo do pagamento: " + pagamento[1].innerHTML + "\n Dinheiro: R$ " + dinheiro_a_vista.value + " Troco: R$ " + valor_total + "\n ";
 
          convert = window.encodeURIComponent(texto);
 

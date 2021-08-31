@@ -389,8 +389,8 @@
 
                         <select class="w3-input w3-padding-16" onchange="escolher_prato()" onclick="meu_valor()" oninput="escolha_pagamento()" required="required" name="list" id="tipo_prato"> 
                             
-                            <option value="" disabled selected  >PRATOS</option>
-                            <option value="0" disabled >Selecionar...</option>
+                           
+                            <option value="" disabled selected>Selecionar...</option>
                             <option value="Bolo">Bolo </option>
                             <option value="Torta">Torta</option>
                             <option value="Salgado">Salgado</option>
@@ -461,14 +461,14 @@
 
                 </select></p>
                         <!-- torta de limão -->
-                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" onclick="meu_valor()" name="" id="torta_valor">
+                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato(),meu_valor()" name="" id="torta_valor">
                     <optgroup label="PREÇO">
                     <option value="1">Inteiro R$ 24,00</option>
                     <option value="2">Fatia R$ 4,00</option>
                 </optgroup>
                 </select></P>
                         <!-- torta de negresco -->
-                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato()" onclick="meu_valor()" name="" id="torta_valor1">
+                        <P> <select class="w3-input w3-padding-16" oninput="escolher_prato(),meu_valor()" name="" id="torta_valor1">
                     <optgroup label="PREÇO">
                     <option value="1">Inteiro R$ 35,00</option>
                     <option value="2">Fatia R$ 7,00</option>
@@ -527,7 +527,7 @@
                     </optgroup>
                     
                 </select></P>
-                        <!-- copo da felicidade -->
+                        <!-- tipos de doces  -->
                         <p> <select class="w3-input w3-padding-16" placeholder="selecione o pedido" required name="list" id="Doce">
 
                         <option value="1">Brownie </option>
