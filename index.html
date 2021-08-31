@@ -371,12 +371,12 @@
                     <!-- numero de telefone -->
                     <p><input class="w3-input w3-padding-16" type="tel" pattern="[0-9]{2}[0-9]{9}" placeholder="Celular" maxlength="11" minlength="9" id="celular" required name="People"></p>
                     <!-- endereço -->
-                    <p><input type="text" id="rua" required class="w3-input w3-padding-16" placeholder="Endereço da rua..." oninput=""></p>
+                    <p><input type="text" id="rua" required class="w3-input w3-padding-16" placeholder="Endereço da sua Rua " oninput=""></p>
                     <p></p>
                     <!-- numero da casa -->
-                    <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº" max="99999" required pattern="([0-9]{9})" name="numero-casa" oninput=""></p>
+                    <p><input type="number" id="rua_numero" class="w3-input w3-padding-16" placeholder="Nº da casa" max="99999" required pattern="([0-9]{9})" maxlength="4" name="numero-casa" oninput=""></p>
                     <!-- referencia -->
-                    <p><input type="text" id="referencia" required placeholder="Referência" class="w3-input w3-padding-16" oninput=""></p>
+                    <p><input type="text" id="referencia" required placeholder="Ponto de referência" class="w3-input w3-padding-16" oninput=""></p>
                 </fieldset>
                 <p> <br>
                     <h4 align="center">Pedidos</h4>
@@ -400,11 +400,11 @@
                     </select>
 
                         <!-- massa -->
-                        <p><select class="w3-input w3-padding-16" required name="list" id="copo_massa">
+                        <p><select class="w3-input w3-padding-16" required name="list" id="copo_massa" oninput="escolher_prato()">
                         <optgroup label="MASSA">
-                        <option value="">Selecionar...</option>
+                        <option value="" disabled >Selecionar...</option>
                         
-                        <option value="Copos da Felicidade">Massa Red Velvet</option>
+                        <option value="Copos da Felicidade" selected>Massa Red Velvet</option>
                         <option value="Copos da Felicidade">Massa branca (ovos) </option>
                         <option value="Copos da Felicidade">Massa Preta (chocolate) </option>
                         <option value="Copos da Felicidade">Massa laranja </option>
@@ -413,23 +413,23 @@
                     </select></p>
 
                         <!-- coberturas -->
-                        <p><select class="w3-input w3-padding-16" required name="list" id="copo_cobertura">
+                        <p><select class="w3-input w3-padding-16" required name="list" id="copo_cobertura" oninput="escolher_prato()">
                     <optgroup label="COBERTURAS">
-                        <option value="">Selecionar...</option>
+                        <option value="" disabled >Selecionar...</option>
                         <option value="0">Nenhum</option>
-                        <option value="Copos da Felicidade">Cobertura Frutais: (Morangos, maracujá, cerejas e etc)</option>
+                        <option value="Copos da Felicidade" selected>Cobertura Frutais</option>
                         <option value="Copos da Felicidade">Cobertura Recheio tradicional</option>
                         <option value="Copos da Felicidade">Cobertura Chantilly</option>
                     </optgroup>
                         
                 </select></p>
                         <!-- caldas -->
-                        <p> <select class="w3-input w3-padding-16" required name="list" id="copo_caldas">
+                        <p> <select class="w3-input w3-padding-16" required name="list" id="copo_caldas" oninput="escolher_prato()">
                         
                         
                        <optgroup label="CALDAS">
-                           <option value="">Selecionar...</option>
-                           <option value="0">Nenhum</option>
+                           <option value="" disabled selected>Selecionar...</option>
+                           <option value="0" selected>Nenhum</option>
                            <option value="Copos da Felicidade">Calda de Morango</option>
                            <option value="Copos da Felicidade">Calda de Maracujá</option>
                         </optgroup>
@@ -437,10 +437,10 @@
                         
                     </select></p>
                         <!-- recheio -->
-                        <p> <select class="w3-input w3-padding-16" required name="list" id="copo_recheio">               
+                        <p> <select class="w3-input w3-padding-16" required name="list" id="copo_recheio" oninput="escolher_prato()">               
                     <optgroup label="RECHEIO">
-                        <option value="">Selecionar...</option>
-                        <option value="0">Nenhum</option>
+                        <option value=""disabled >Selecionar...</option>
+                        <option value="0" selected>Nenhum</option>
                         <option class="amendoim" value="Copos da Felicidade" > Recheio Amendoim </option>
                         <option class="castanho" value="Copos da Felicidade">Recheio Castanha</option>
                         <option value="Copos da Felicidade">Recheio Chocolate Branco</option>

@@ -247,10 +247,6 @@
          }
 
 
-
-
-
-
      } else {
          bolo.style.display = "none"
          bolo_parte.style.display = "none"
@@ -273,6 +269,46 @@
              total_compras = 13;
 
 
+             for (let i = 1; i <= 5; i++) {
+                 if (copo_massa[i].selected == true) {
+                     massa = copo_massa[i].innerHTML
+
+
+                     console.log(massa)
+                 }
+
+             }
+
+
+             for (let i = 1; i <= 4; i++) {
+                 if (copo_cobertura[i].selected == true) {
+
+                     cobertura = copo_cobertura[i].innerHTML
+
+                     console.log(cobertura)
+                 }
+
+             }
+
+             for (let i = 1; i <= 3; i++) {
+                 if (copo_caldas[i].selected == true) {
+
+                     caldas = copo_caldas[i].innerHTML
+
+                     console.log(caldas)
+                 }
+
+             }
+             for (let i = 1; i <= 11; i++) {
+                 if (copo_recheio[i].selected == true) {
+
+                     recheio = copo_recheio[i].innerHTML
+
+
+                     console.log(recheio)
+                 }
+
+             }
          }
      } else {
          copo_caldas.style.display = "none"
@@ -294,8 +330,8 @@
 
      }
 
-
  }
+
 
  // função para fazer o resultado do calculo da loja 
  function escolha_pagamento() {
@@ -393,13 +429,25 @@
 
          alert("você será direcionado para o whatsapp ")
 
-         var my_celular = "5579999722046";
+         var my_celular = "5579988335481";
 
-         var texto = "Nome: " + nome.value + "\n telefone: " +
-             celular_cliente.value + "  \n Endereço: " + rua.value + "\n nº: " +
-             n_rua.value + "  \n referência: " + referencia.value + "\n Prato: " + menu_prato + "\nComida :" + nome_prato + " Valor R$ " + total_compras +
-             "\n Tipo do pagamento: " + pagamento[1].innerHTML + "\n Dinheiro: R$ " + dinheiro_a_vista.value + " Troco: R$ " + valor_total + "\n ";
 
+         if (tipo_prato.value == "copo") {
+             var texto = "*Nome: " + nome.value + "\n *Telefone: " +
+                 celular_cliente.value + "  \n *Endereço: " + rua.value + "\n *Nº: " +
+                 n_rua.value + "  \n *Referência: " + referencia.value + "\n *vou querer o " + menu_prato + " com  a " + massa + " ,  " + cobertura + " ,  " + recheio + " ,  " + caldas + "\n Valor R$ " + total_compras +
+                 "\n Pagamento: " + pagamento[1].innerHTML + " R$ " + dinheiro_a_vista.value + " Troco: R$ " + valor_total + "\n ";
+
+         } else {
+
+
+
+             var texto = "*Nome: " + nome.value + "\n *Telefone: " +
+                 celular_cliente.value + "  \n *Endereço: " + rua.value + "\n Nº: " +
+                 n_rua.value + "  \n *Ponto de referência: " + referencia.value + "\n *Vou querer :" + nome_prato + "\n *Valor R$ " + total_compras +
+                 "\n *Pagamento: " + pagamento[1].innerHTML + " R$ " + dinheiro_a_vista.value + " Troco: R$ " + valor_total + "\n ";
+
+         }
          convert = window.encodeURIComponent(texto);
 
          window.open("https://api.whatsapp.com/send?phone=" + my_celular + "&text=" + convert, "_blank");
